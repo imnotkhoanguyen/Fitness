@@ -18,12 +18,14 @@ This is a modern, fast, and responsive website built with Astro 5.x featuring:
 │   ├── components/       # Reusable components
 │   │   ├── Navigation.astro
 │   │   ├── Footer.astro
-│   │   └── LanguageSwitcher.astro
+│   │   ├── LanguageSwitcher.astro
+│   │   ├── SchemaMarkup.astro    # SEO structured data
+│   │   └── ServiceSchema.astro   # Service-specific schema
 │   ├── i18n/            # Internationalization
 │   │   ├── ui.ts        # Translations for EN/VI
 │   │   └── utils.ts     # i18n helper functions
 │   ├── layouts/
-│   │   └── Layout.astro # Main page layout
+│   │   └── Layout.astro # Main page layout with SEO meta tags
 │   └── pages/
 │       ├── index.astro  # English homepage
 │       ├── services.astro
@@ -48,6 +50,12 @@ This is a modern, fast, and responsive website built with Astro 5.x featuring:
 - **2025-10-18**: Created all 5 pages in both languages
 - **2025-10-18**: Added responsive navigation and footer components
 - **2025-10-18**: Configured for deployment on Replit
+- **2025-10-18**: Added comprehensive Schema.org markup (JSON-LD) for SEO
+  - HealthAndBeautyBusiness schema with business details
+  - Complete service catalog (Nutrition, Fitness, Lifestyle coaching)
+  - OpeningHours, GeoCoordinates, and local business information
+  - WebSite schema with language alternatives
+  - SEO meta tags (Open Graph, Twitter Cards, keywords)
 
 ## Technology Stack
 
@@ -55,6 +63,7 @@ This is a modern, fast, and responsive website built with Astro 5.x featuring:
 - **Language**: TypeScript (strict mode)
 - **Styling**: Scoped CSS (component-level)
 - **i18n**: Custom implementation with Astro's built-in routing
+- **SEO**: Schema.org JSON-LD markup, Open Graph, Twitter Cards
 - **Deployment**: Replit Autoscale
 
 ## Development

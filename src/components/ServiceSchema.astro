@@ -1,0 +1,53 @@
+---
+import { getLangFromUrl } from '../i18n/utils';
+
+interface Props {
+  serviceName: string;
+  serviceNameVi: string;
+  description: string;
+  descriptionVi: string;
+  serviceType: string;
+}
+
+const { serviceName, serviceNameVi, description, descriptionVi, serviceType } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": lang === 'vi' ? serviceNameVi : serviceName,
+  "description": lang === 'vi' ? descriptionVi : description,
+  "provider": {
+    "@type": "HealthAndBeautyBusiness",
+    "name": "The Energy Factory",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Long Khanh City",
+      "addressRegion": "Dong Nai Province",
+      "addressCountry": "VN"
+    },
+    "telephone": "+84",
+    "url": "https://energy-factory-longkhanh.com"
+  },
+  "serviceType": serviceType,
+  "category": "Health & Wellness",
+  "areaServed": {
+    "@type": "City",
+    "name": "Long Khanh City"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Long Khanh City",
+        "addressRegion": "Dong Nai Province",
+        "addressCountry": "VN"
+      }
+    }
+  }
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

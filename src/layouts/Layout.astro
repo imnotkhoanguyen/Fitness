@@ -1,6 +1,7 @@
 ---
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
 import { getLangFromUrl } from '../i18n/utils';
 
 interface Props {
@@ -20,7 +21,27 @@ const lang = getLangFromUrl(Astro.url);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    
+    <meta name="keywords" content={lang === 'vi' 
+      ? "huấn luyện dinh dưỡng, tập luyện thể dục, lối sống lành mạnh, Long Khánh, Đồng Nai, coaching, wellness"
+      : "nutrition coaching, fitness training, healthy lifestyle, Long Khanh, Dong Nai, wellness coaching, personal trainer"} />
+    <meta name="author" content="The Energy Factory" />
+    
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={lang === 'vi' ? 'vi_VN' : 'en_US'} />
+    <meta property="og:site_name" content="The Energy Factory" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <link rel="canonical" href={Astro.url.href} />
+    
     <title>{title}</title>
+    
+    <SchemaMarkup />
   </head>
   <body>
     <Navigation />

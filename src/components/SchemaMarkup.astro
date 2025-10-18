@@ -1,0 +1,157 @@
+---
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const currentUrl = Astro.url.href;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "https://energy-factory-longkhanh.com/#organization",
+      "name": "The Energy Factory",
+      "alternateName": lang === 'vi' ? "The Energy Factory - Long Khánh" : "The Energy Factory - Long Khanh",
+      "url": currentUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/images/dumbbell-icon.png"
+      },
+      "image": [
+        "/images/main-guy.png",
+        "/images/fitness.png"
+      ],
+      "description": lang === 'vi' 
+        ? "Huấn luyện lối sống lành mạnh chuyên nghiệp tại Thành Phố Long Khánh, Tỉnh Đồng Nai, Việt Nam"
+        : "Professional healthy lifestyle coaching in Long Khanh City, Dong Nai Province, Vietnam",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Long Khanh City",
+        "addressRegion": "Dong Nai Province",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "10.9456",
+        "longitude": "107.2426"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "06:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "07:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "City",
+        "name": "Long Khanh City"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": lang === 'vi' ? "Dịch Vụ Huấn Luyện" : "Coaching Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": lang === 'vi' ? "Huấn Luyện Dinh Dưỡng" : "Nutrition Coaching",
+              "description": lang === 'vi' 
+                ? "Kế hoạch bữa ăn cá nhân hóa và hướng dẫn dinh dưỡng cho sức khỏe tối ưu"
+                : "Personalized meal plans and nutrition guidance for optimal health",
+              "provider": {
+                "@id": "https://energy-factory-longkhanh.com/#organization"
+              },
+              "serviceType": "Nutrition Coaching",
+              "category": "Health & Wellness"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": lang === 'vi' ? "Tập Luyện Thể Dục" : "Fitness Training",
+              "description": lang === 'vi'
+                ? "Chương trình tập luyện tùy chỉnh phù hợp với mục tiêu và trình độ của bạn"
+                : "Customized workout programs tailored to your goals and fitness level",
+              "provider": {
+                "@id": "https://energy-factory-longkhanh.com/#organization"
+              },
+              "serviceType": "Fitness Training",
+              "category": "Health & Wellness"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": lang === 'vi' ? "Huấn Luyện Lối Sống" : "Lifestyle Coaching",
+              "description": lang === 'vi'
+                ? "Phương pháp toàn diện về sức khỏe bao gồm quản lý căng thẳng và hình thành thói quen"
+                : "Holistic approach to wellness including stress management and habit formation",
+              "provider": {
+                "@id": "https://energy-factory-longkhanh.com/#organization"
+              },
+              "serviceType": "Lifestyle Coaching",
+              "category": "Health & Wellness"
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Nutrition",
+        "Fitness",
+        "Wellness",
+        "Healthy Lifestyle",
+        "Stress Management",
+        "Habit Formation",
+        "Meal Planning",
+        "Workout Programs"
+      ],
+      "slogan": lang === 'vi' 
+        ? "Trao quyền cho lối sống lành mạnh tại Long Khánh"
+        : "Empowering healthy lifestyles in Long Khanh"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://energy-factory-longkhanh.com/#website",
+      "url": currentUrl,
+      "name": "The Energy Factory",
+      "description": lang === 'vi'
+        ? "Website chính thức của The Energy Factory - Huấn luyện lối sống lành mạnh tại Long Khánh"
+        : "Official website of The Energy Factory - Healthy lifestyle coaching in Long Khanh",
+      "publisher": {
+        "@id": "https://energy-factory-longkhanh.com/#organization"
+      },
+      "inLanguage": [lang, lang === 'en' ? 'vi' : 'en']
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://energy-factory-longkhanh.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": lang === 'vi' ? "Trang Chủ" : "Home",
+          "item": lang === 'en' ? "/" : "/vi"
+        }
+      ]
+    }
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
