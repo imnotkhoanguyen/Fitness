@@ -7,10 +7,12 @@ A professional bilingual (English/Vietnamese) Astro website for a hybrid fitness
 This is a modern, fast, and responsive website built with Astro 5.x featuring:
 - **Bilingual Support**: Full English and Vietnamese translations
 - **Hybrid Fitness Focus**: Combines calisthenics and weight training coaching
-- **E-commerce Integration**: Premium supplements catalog
+- **E-commerce Ready**: Product catalog with purchase CTAs (Stripe integration ready)
+- **Booking System**: Dedicated booking page (Calendly integration ready)
 - **SEO Optimized**: Structured data for local search visibility
 - **Mobile-First**: Responsive design optimized for on-the-go users
-- **Conversion-Focused**: Clear CTAs for coaching and supplement sales
+- **Conversion-Focused**: Clear CTAs, testimonials, and trust-building content
+- **Legal Pages**: Privacy Policy and Terms of Service included
 
 ## Project Structure
 
@@ -29,19 +31,23 @@ This is a modern, fast, and responsive website built with Astro 5.x featuring:
 │   ├── layouts/
 │   │   └── Layout.astro # Main page layout with SEO meta tags
 │   └── pages/
-│       ├── index.astro  # English homepage
-│       ├── services.astro  # Coaching programs
-│       ├── products.astro  # Supplements catalog
-│       ├── locations.astro # Long Khanh location
-│       ├── about.astro     # Coach expertise & philosophy
-│       ├── contact.astro   # Lead generation form
-│       └── vi/          # Vietnamese pages
+│       ├── index.astro      # English homepage (with testimonials)
+│       ├── services.astro   # Coaching programs
+│       ├── products.astro   # Supplements catalog
+│       ├── about.astro      # Coach expertise & philosophy
+│       ├── contact.astro    # Lead generation form
+│       ├── faq.astro        # Frequently asked questions
+│       ├── booking.astro    # Booking page (Calendly ready)
+│       ├── privacy.astro    # Privacy Policy
+│       ├── terms.astro      # Terms of Service
+│       └── vi/              # Vietnamese pages
 │           ├── index.astro
 │           ├── services.astro
 │           ├── products.astro
-│           ├── locations.astro
 │           ├── about.astro
-│           └── contact.astro
+│           ├── contact.astro
+│           ├── faq.astro
+│           └── booking.astro
 ├── public/
 │   └── images/          # Static images
 └── astro.config.mjs     # Astro configuration
@@ -52,14 +58,14 @@ This is a modern, fast, and responsive website built with Astro 5.x featuring:
 - **2025-10-18**: Initial project setup with Astro 5.x
 - **2025-10-18**: Implemented bilingual i18n (English/Vietnamese)
 - **2025-10-18**: Redesigned for hybrid fitness coaching business
-- **2025-10-18**: Added Products/Supplements page
+- **2025-10-18**: Added Products/Supplements page with catalog
 - **2025-10-18**: Updated all content for calisthenics & weight training focus
-- **2025-10-18**: Added comprehensive Schema.org markup for SportsActivityLocation
-  - Hybrid fitness business schema
-  - Service catalog (Calisthenics, Weight Training, Hybrid Coaching)
-  - Product catalog (Supplements)
-  - Target audience: 18-45 fitness enthusiasts
-  - SEO meta tags (Open Graph, Twitter Cards, keywords)
+- **2025-10-18**: Added comprehensive Schema.org markup for SEO
+- **2025-10-18**: Created FAQ page with coaching and supplement questions
+- **2025-10-18**: Added Booking page (ready for Calendly integration)
+- **2025-10-18**: Created Privacy Policy and Terms of Service pages
+- **2025-10-18**: Added testimonials section to homepage
+- **2025-10-18**: Updated navigation and footer with all new pages
 
 ## Technology Stack
 
@@ -68,7 +74,9 @@ This is a modern, fast, and responsive website built with Astro 5.x featuring:
 - **Styling**: Scoped CSS (component-level)
 - **i18n**: Custom implementation with Astro's built-in routing
 - **SEO**: Schema.org JSON-LD markup, Open Graph, Twitter Cards
-- **Deployment**: Replit Autoscale
+- **Deployment**: Replit Autoscale (static site)
+- **Payment Ready**: Stripe integration blueprint available
+- **Booking Ready**: Calendly embed placeholder included
 
 ## Development
 
@@ -91,20 +99,26 @@ npm run preview
 ## Pages
 
 ### English Version
-- `/` - Homepage (Hybrid Fitness Focus)
+- `/` - Homepage (Hybrid Fitness Focus + Testimonials)
 - `/services` - Coaching programs (Calisthenics, Weight Training, Hybrid, Nutrition)
 - `/products` - Premium supplements catalog
-- `/locations` - Long Khanh training location
 - `/about` - Coach expertise and hybrid fitness philosophy
 - `/contact` - Lead generation form with fitness goals
+- `/faq` - Frequently asked questions about coaching and products
+- `/booking` - Book free consultation (Calendly integration ready)
+- `/privacy` - Privacy Policy
+- `/terms` - Terms of Service
 
 ### Vietnamese Version
-- `/vi` - Trang Chủ
+- `/vi` - Trang Chủ (với Đánh Giá Học Viên)
 - `/vi/services` - Dịch Vụ Huấn Luyện
 - `/vi/products` - Thực Phẩm Bổ Sung
-- `/vi/locations` - Địa Điểm
 - `/vi/about` - Về Chúng Tôi
 - `/vi/contact` - Liên Hệ
+- `/vi/faq` - Câu Hỏi Thường Gặp
+- `/vi/booking` - Đặt Lịch Tư Vấn
+- `/privacy` - Chính Sách Bảo Mật (English only)
+- `/terms` - Điều Khoản Dịch Vụ (English only)
 
 ## Business Information
 
@@ -141,11 +155,33 @@ Long Khanh City, Dong Nai Province, Vietnam
 - Conversion goals: Generate coaching clients and supplement buyers
 - Mobile-first: Many users access on the go
 
+## Next Steps (Optional Enhancements)
+
+### E-commerce Integration
+- Add Stripe payment processing for supplement purchases
+- Implement shopping cart functionality
+- Set up order confirmation emails
+
+### Booking System
+- Integrate Calendly for automated booking
+- Or implement custom booking with Google Calendar API
+
+### Blog/Resources
+- Set up Astro content collections for blog posts
+- Create downloadable guides (workout PDFs, meal planners)
+- Write articles about hybrid fitness training
+
+### Advanced Features
+- User authentication for member-only content
+- Progress tracking dashboard for coaching clients
+- Email marketing integration (Mailchimp/ConvertKit)
+- Video content library
+
 ## Deployment Configuration
 
 - **Target**: Autoscale (static site)
 - **Build**: `npm run build`
-- **Serve**: `npx serve dist -l 5000`
+- **Output**: `dist/` directory
 - **Port**: 5000
 
 ## GitHub Repository
