@@ -72,6 +72,38 @@ const t = useTranslations('en');
 
   <section class="section" style="background: var(--light-bg);">
     <div class="container">
+      <h2 class="section-title">What Clients Say</h2>
+      <div class="grid grid-3">
+        <div class="card testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p style="font-style: italic; color: #666; margin: 1rem 0;">
+            "I went from struggling with 5 pull-ups to doing muscle-ups in 4 months. The hybrid program transformed my strength and physique completely."
+          </p>
+          <p style="font-weight: 600; color: var(--primary);">- Minh T., 28</p>
+          <p style="font-size: 0.9rem; color: #999;">Long Khanh</p>
+        </div>
+        <div class="card testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p style="font-style: italic; color: #666; margin: 1rem 0;">
+            "Best investment in my health. The nutrition coaching and personalized workouts helped me drop 12kg while gaining muscle. Highly recommend!"
+          </p>
+          <p style="font-weight: 600; color: var(--primary);">- Hương N., 35</p>
+          <p style="font-size: 0.9rem; color: #999;">Dong Nai</p>
+        </div>
+        <div class="card testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p style="font-style: italic; color: #666; margin: 1rem 0;">
+            "Finally found a coach who understands hybrid training. The combination of calisthenics and weights gave me results I never got from gym alone."
+          </p>
+          <p style="font-weight: 600; color: var(--primary);">- Tuấn L., 42</p>
+          <p style="font-size: 0.9rem; color: #999;">HCMC</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
       <h2 class="section-title">{t('products.title')}</h2>
       <div class="grid grid-3">
         <div class="card">
@@ -104,5 +136,14 @@ const t = useTranslations('en');
   .btn-outline:hover {
     background: white;
     color: var(--primary);
+  }
+
+  .testimonial {
+    text-align: center;
+  }
+
+  .stars {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
   }
 </style>

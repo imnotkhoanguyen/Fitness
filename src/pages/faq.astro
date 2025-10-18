@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations('en');
+
+const faqs = [
+  {
+    category: "Coaching Services",
+    questions: [
+      {
+        q: "What's included in hybrid fitness coaching?",
+        a: "Hybrid coaching combines calisthenics (bodyweight training) with traditional weight lifting. You'll get a personalized training program, nutrition coaching, form checks via video analysis, weekly progress reviews, and 24/7 messaging support."
+      },
+      {
+        q: "Do I need gym equipment to start?",
+        a: "It depends on your goals. For pure calisthenics, you only need a pull-up bar and dip station. For hybrid training, access to basic weights (barbells, dumbbells) is recommended. I can design programs around whatever equipment you have available."
+      },
+      {
+        q: "How do online coaching sessions work?",
+        a: "After booking, you'll receive a personalized training plan and nutrition guide. We'll have weekly video check-ins where I review your form, adjust your program, and answer questions. You'll also get ongoing support via messaging."
+      },
+      {
+        q: "What if I'm a complete beginner?",
+        a: "Perfect! I specialize in teaching proper fundamentals. We'll start with basic movements, build your strength foundation, and progressively work toward more advanced skills. Every program is tailored to your current fitness level."
+      },
+      {
+        q: "How long before I see results?",
+        a: "Most clients notice strength improvements within 2-3 weeks and visible physique changes within 6-8 weeks. However, results depend on consistency, nutrition, recovery, and your starting point."
+      }
+    ]
+  },
+  {
+    category: "Supplements",
+    questions: [
+      {
+        q: "Do I need supplements to see results?",
+        a: "No, supplements are not required. They're called 'supplements' for a reason - they supplement a solid training and nutrition foundation. However, they can help optimize recovery, performance, and convenience."
+      },
+      {
+        q: "Which supplement should I start with?",
+        a: "Protein powder is the most versatile and beneficial for most people. It helps you meet daily protein targets for muscle growth and recovery. After that, consider a pre-workout for energy and focus during training."
+      },
+      {
+        q: "How do I know which products are right for me?",
+        a: "Contact me with your goals, training schedule, and dietary preferences. I'll recommend specific products based on your needs. All products I sell are ones I personally use and trust."
+      },
+      {
+        q: "Are the supplements tested for quality?",
+        a: "Yes, all supplements I carry are from reputable brands that third-party test for purity and potency. I only stock products I would use myself."
+      },
+      {
+        q: "Can I buy supplements without coaching?",
+        a: "Absolutely! You can purchase supplements without signing up for coaching. However, coaching clients get personalized supplement recommendations as part of their nutrition plan."
+      }
+    ]
+  },
+  {
+    category: "Pricing & Booking",
+    questions: [
+      {
+        q: "How much does coaching cost?",
+        a: "Coaching packages start at monthly subscriptions. Contact me for current pricing and available packages. First consultation is always free so we can discuss your goals and find the right fit."
+      },
+      {
+        q: "Do you offer refunds?",
+        a: "Coaching: If you're not satisfied within the first 7 days, I'll provide a full refund. Supplements: Unopened products can be returned within 30 days for a refund."
+      },
+      {
+        q: "How do I book a session?",
+        a: "Click the 'Start Training Today' button or visit the Contact page. Fill out the form with your goals and experience level, and I'll get back to you within 24 hours to schedule your free consultation."
+      },
+      {
+        q: "What payment methods do you accept?",
+        a: "I accept all major credit cards, debit cards, and bank transfers through our secure payment processor. Supplement purchases can also be made with cash on delivery in Long Khanh."
+      }
+    ]
+  },
+  {
+    category: "Training Location",
+    questions: [
+      {
+        q: "Where do you train clients?",
+        a: "I'm based in Long Khanh City, Dong Nai Province. I offer both in-person training sessions at local facilities and online coaching for clients anywhere in Vietnam or internationally."
+      },
+      {
+        q: "What are your training hours?",
+        a: "Monday-Friday: 6:00 AM - 9:00 PM, Saturday: 7:00 AM - 8:00 PM, Sunday: 8:00 AM - 6:00 PM. Online coaching clients have flexible access to their programs 24/7."
+      }
+    ]
+  }
+];
+---
+
+<Layout title={`FAQ - ${t('site.title')}`}>
+  <section class="hero" style="padding: 4rem 0 3rem;">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p style="font-size: 1.1rem; max-width: 700px; margin: 1rem auto 0;">
+        Got questions about coaching, supplements, or how to get started? Find answers below.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        {faqs.map((category) => (
+          <div style="margin-bottom: 3rem;">
+            <h2 style="color: var(--primary); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary);">
+              {category.category}
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              {category.questions.map((faq) => (
+                <div class="card">
+                  <h3 style="color: #333; margin-bottom: 0.75rem; font-size: 1.1rem;">
+                    {faq.q}
+                  </h3>
+                  <p style="color: #666; line-height: 1.8;">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+    <div class="container">
+      <h2 style="color: white; margin-bottom: 1rem;">Still Have Questions?</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">
+        I'm here to help! Reach out and I'll get back to you within 24 hours.
+      </p>
+      <a href="/contact" class="btn" style="background: white; color: var(--primary);">
+        Contact Me
+      </a>
+    </div>
+  </section>
+</Layout>

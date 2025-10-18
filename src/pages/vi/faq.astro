@@ -1,0 +1,142 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('vi');
+
+const faqs = [
+  {
+    category: "Dịch Vụ Huấn Luyện",
+    questions: [
+      {
+        q: "Huấn luyện hybrid fitness bao gồm những gì?",
+        a: "Huấn luyện hybrid kết hợp calisthenics (tập trọng lượng cơ thể) với tập tạ truyền thống. Bạn sẽ nhận được chương trình tập luyện cá nhân hóa, huấn luyện dinh dưỡng, kiểm tra kỹ thuật qua video, đánh giá tiến độ hàng tuần và hỗ trợ nhắn tin 24/7."
+      },
+      {
+        q: "Tôi có cần thiết bị phòng gym để bắt đầu không?",
+        a: "Tùy thuộc vào mục tiêu của bạn. Đối với calisthenics thuần túy, bạn chỉ cần xà đơn và xà kép. Đối với tập hybrid, nên có thiết bị tạ cơ bản (tạ đòn, tạ đơn). Tôi có thể thiết kế chương trình phù hợp với thiết bị bạn có."
+      },
+      {
+        q: "Buổi huấn luyện online hoạt động như thế nào?",
+        a: "Sau khi đặt lịch, bạn sẽ nhận được kế hoạch tập luyện và hướng dẫn dinh dưỡng cá nhân. Chúng ta sẽ có buổi check-in video hàng tuần để tôi xem xét kỹ thuật, điều chỉnh chương trình và trả lời câu hỏi. Bạn cũng được hỗ trợ liên tục qua tin nhắn."
+      },
+      {
+        q: "Nếu tôi là người mới bắt đầu hoàn toàn thì sao?",
+        a: "Hoàn hảo! Tôi chuyên dạy nền tảng cơ bản đúng cách. Chúng ta sẽ bắt đầu với động tác cơ bản, xây dựng nền tảng sức mạnh và dần tiến đến các kỹ năng nâng cao hơn. Mọi chương trình đều được điều chỉnh theo trình độ hiện tại của bạn."
+      },
+      {
+        q: "Bao lâu tôi sẽ thấy kết quả?",
+        a: "Hầu hết học viên nhận thấy cải thiện sức mạnh trong vòng 2-3 tuần và thay đổi thể hình rõ ràng trong 6-8 tuần. Tuy nhiên, kết quả phụ thuộc vào sự kiên trì, dinh dưỡng, phục hồi và điểm xuất phát của bạn."
+      }
+    ]
+  },
+  {
+    category: "Thực Phẩm Bổ Sung",
+    questions: [
+      {
+        q: "Tôi có cần thực phẩm bổ sung để có kết quả không?",
+        a: "Không, thực phẩm bổ sung không bắt buộc. Chúng được gọi là 'bổ sung' vì chúng hỗ trợ nền tảng tập luyện và dinh dưỡng vững chắc. Tuy nhiên, chúng có thể giúp tối ưu hóa phục hồi, hiệu suất và sự tiện lợi."
+      },
+      {
+        q: "Tôi nên bắt đầu với thực phẩm bổ sung nào?",
+        a: "Bột protein là sản phẩm đa năng và có lợi nhất cho hầu hết mọi người. Nó giúp bạn đạt chỉ tiêu protein hàng ngày cho tăng trưởng cơ bắp và phục hồi. Sau đó, hãy xem xét pre-workout cho năng lượng và tập trung khi tập luyện."
+      },
+      {
+        q: "Làm sao tôi biết sản phẩm nào phù hợp với mình?",
+        a: "Liên hệ với tôi về mục tiêu, lịch tập luyện và sở thích ăn uống của bạn. Tôi sẽ đề xuất các sản phẩm cụ thể dựa trên nhu cầu của bạn. Tất cả sản phẩm tôi bán đều là những gì tôi sử dụng và tin tưởng."
+      },
+      {
+        q: "Các thực phẩm bổ sung có được kiểm tra chất lượng không?",
+        a: "Có, tất cả thực phẩm bổ sung tôi cung cấp đều từ các thương hiệu uy tín có kiểm tra bên thứ ba về độ tinh khiết và hiệu lực. Tôi chỉ lưu kho những sản phẩm tôi sẽ tự sử dụng."
+      },
+      {
+        q: "Tôi có thể mua thực phẩm bổ sung mà không cần huấn luyện không?",
+        a: "Tất nhiên! Bạn có thể mua thực phẩm bổ sung mà không cần đăng ký huấn luyện. Tuy nhiên, học viên huấn luyện sẽ nhận được đề xuất thực phẩm bổ sung cá nhân hóa như một phần của kế hoạch dinh dưỡng."
+      }
+    ]
+  },
+  {
+    category: "Giá Cả & Đặt Lịch",
+    questions: [
+      {
+        q: "Huấn luyện có giá bao nhiêu?",
+        a: "Các gói huấn luyện bắt đầu từ đăng ký hàng tháng. Liên hệ với tôi để biết giá hiện tại và các gói có sẵn. Tư vấn đầu tiên luôn miễn phí để chúng ta thảo luận về mục tiêu và tìm phương án phù hợp."
+      },
+      {
+        q: "Bạn có hoàn tiền không?",
+        a: "Huấn luyện: Nếu bạn không hài lòng trong 7 ngày đầu, tôi sẽ hoàn lại toàn bộ tiền. Thực phẩm bổ sung: Sản phẩm chưa mở có thể trả lại trong vòng 30 ngày để được hoàn tiền."
+      },
+      {
+        q: "Làm thế nào để đặt lịch buổi tập?",
+        a: "Nhấp vào nút 'Bắt Đầu Tập Luyện' hoặc truy cập trang Liên Hệ. Điền form với mục tiêu và trình độ của bạn, tôi sẽ phản hồi trong vòng 24 giờ để sắp xếp buổi tư vấn miễn phí."
+      },
+      {
+        q: "Bạn chấp nhận phương thức thanh toán nào?",
+        a: "Tôi chấp nhận tất cả các loại thẻ tín dụng, thẻ ghi nợ và chuyển khoản ngân hàng qua hệ thống thanh toán bảo mật. Mua thực phẩm bổ sung cũng có thể thanh toán tiền mặt khi nhận hàng tại Long Khánh."
+      }
+    ]
+  },
+  {
+    category: "Địa Điểm Tập Luyện",
+    questions: [
+      {
+        q: "Bạn huấn luyện học viên ở đâu?",
+        a: "Tôi đặt trụ sở tại Thành phố Long Khánh, tỉnh Đồng Nai. Tôi cung cấp cả buổi tập trực tiếp tại các cơ sở địa phương và huấn luyện online cho học viên ở bất cứ đâu tại Việt Nam hoặc quốc tế."
+      },
+      {
+        q: "Giờ tập luyện của bạn là gì?",
+        a: "Thứ 2-6: 6:00 SA - 9:00 CH, Thứ 7: 7:00 SA - 8:00 CH, Chủ Nhật: 8:00 SA - 6:00 CH. Học viên huấn luyện online có quyền truy cập linh hoạt vào chương trình 24/7."
+      }
+    ]
+  }
+];
+---
+
+<Layout title={`FAQ - ${t('site.title')}`}>
+  <section class="hero" style="padding: 4rem 0 3rem;">
+    <div class="container">
+      <h1>Câu Hỏi Thường Gặp</h1>
+      <p style="font-size: 1.1rem; max-width: 700px; margin: 1rem auto 0;">
+        Có câu hỏi về huấn luyện, thực phẩm bổ sung hoặc cách bắt đầu? Tìm câu trả lời bên dưới.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        {faqs.map((category) => (
+          <div style="margin-bottom: 3rem;">
+            <h2 style="color: var(--primary); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary);">
+              {category.category}
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              {category.questions.map((faq) => (
+                <div class="card">
+                  <h3 style="color: #333; margin-bottom: 0.75rem; font-size: 1.1rem;">
+                    {faq.q}
+                  </h3>
+                  <p style="color: #666; line-height: 1.8;">
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+    <div class="container">
+      <h2 style="color: white; margin-bottom: 1rem;">Vẫn Có Câu Hỏi?</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">
+        Tôi ở đây để giúp đỡ! Liên hệ và tôi sẽ phản hồi trong vòng 24 giờ.
+      </p>
+      <a href="/vi/contact" class="btn" style="background: white; color: var(--primary);">
+        Liên Hệ
+      </a>
+    </div>
+  </section>
+</Layout>

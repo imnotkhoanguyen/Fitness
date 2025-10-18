@@ -72,6 +72,38 @@ const t = useTranslations('vi');
 
   <section class="section" style="background: var(--light-bg);">
     <div class="container">
+      <h2 class="section-title">Học Viên Nói Gì</h2>
+      <div class="grid grid-3">
+        <div class="card testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p style="font-style: italic; color: #666; margin: 1rem 0;">
+            "Tôi từ chỗ khó làm 5 cái xà đơn đến làm được muscle-up trong 4 tháng. Chương trình hybrid đã thay đổi hoàn toàn sức mạnh và thể hình của tôi."
+          </p>
+          <p style="font-weight: 600; color: var(--primary);">- Minh T., 28 tuổi</p>
+          <p style="font-size: 0.9rem; color: #999;">Long Khánh</p>
+        </div>
+        <div class="card testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p style="font-style: italic; color: #666; margin: 1rem 0;">
+            "Đầu tư tốt nhất cho sức khỏe. Huấn luyện dinh dưỡng và bài tập cá nhân hóa giúp tôi giảm 12kg đồng thời tăng cơ. Rất đáng!"
+          </p>
+          <p style="font-weight: 600; color: var(--primary);">- Hương N., 35 tuổi</p>
+          <p style="font-size: 0.9rem; color: #999;">Đồng Nai</p>
+        </div>
+        <div class="card testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p style="font-style: italic; color: #666; margin: 1rem 0;">
+            "Cuối cùng tìm được huấn luyện viên hiểu hybrid training. Kết hợp calisthenics và tạ cho kết quả mà tôi không bao giờ đạt được chỉ tập gym."
+          </p>
+          <p style="font-weight: 600; color: var(--primary);">- Tuấn L., 42 tuổi</p>
+          <p style="font-size: 0.9rem; color: #999;">TP.HCM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
       <h2 class="section-title">{t('products.title')}</h2>
       <div class="grid grid-3">
         <div class="card">
@@ -104,5 +136,14 @@ const t = useTranslations('vi');
   .btn-outline:hover {
     background: white;
     color: var(--primary);
+  }
+
+  .testimonial {
+    text-align: center;
+  }
+
+  .stars {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
   }
 </style>

@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations('en');
+const lastUpdated = "October 18, 2025";
+---
+
+<Layout title={`Terms of Service - ${t('site.title')}`}>
+  <section class="hero" style="padding: 4rem 0 3rem;">
+    <div class="container">
+      <h1>Terms of Service</h1>
+      <p style="font-size: 1.1rem; max-width: 700px; margin: 1rem auto 0;">
+        Last Updated: {lastUpdated}
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="card">
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">1. Acceptance of Terms</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;">
+            By accessing or using The Energy Factory's services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+          </p>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">2. Services Provided</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;">
+            The Energy Factory provides:
+          </p>
+          <ul style="line-height: 2; color: #666; margin-bottom: 2rem;">
+            <li>Personal fitness coaching (calisthenics, weight training, hybrid programs)</li>
+            <li>Nutrition coaching and meal planning</li>
+            <li>Online training programs</li>
+            <li>Sale of sports supplements and nutrition products</li>
+          </ul>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">3. Coaching Services</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;"><strong>3.1 Health and Safety:</strong></p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;">
+            By purchasing coaching services, you confirm that you are physically capable of participating in fitness training. You should consult with a healthcare professional before beginning any exercise program, especially if you have pre-existing health conditions.
+          </p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;"><strong>3.2 Liability:</strong></p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;">
+            You assume all risks associated with participating in fitness activities. The Energy Factory and its coaches are not liable for any injuries, accidents, or health issues that may occur during or as a result of training.
+          </p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;"><strong>3.3 Refund Policy:</strong></p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;">
+            Coaching services are eligible for a full refund within 7 days of purchase if you are not satisfied. After 7 days, refunds are provided on a case-by-case basis at our discretion.
+          </p>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">4. Product Sales</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;"><strong>4.1 Product Information:</strong></p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;">
+            We make every effort to display accurate product descriptions, ingredients, and pricing. However, we do not warrant that product information is complete or error-free.
+          </p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;"><strong>4.2 Returns and Refunds:</strong></p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;">
+            Unopened supplements may be returned within 30 days of purchase for a full refund. Opened products cannot be returned due to health and safety regulations. Defective or damaged products will be replaced at no cost.
+          </p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;"><strong>4.3 Health Disclaimer:</strong></p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;">
+            Supplements are not intended to diagnose, treat, cure, or prevent any disease. Consult with a healthcare professional before using any supplements, especially if you are pregnant, nursing, have a medical condition, or are taking medications.
+          </p>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">5. Payment Terms</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;">
+            All payments must be made in full at the time of purchase unless otherwise agreed upon. We accept major credit cards, debit cards, and bank transfers. Subscription-based coaching services will be billed monthly until canceled.
+          </p>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">6. Cancellation and Termination</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;"><strong>6.1 Client Cancellation:</strong></p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 1rem;">
+            You may cancel coaching services at any time. For monthly subscriptions, cancellation must be made at least 3 days before the next billing cycle to avoid charges.
+          </p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;"><strong>6.2 Coach Termination:</strong></p>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;">
+            We reserve the right to terminate services if you violate these terms, provide false information, or engage in abusive or disrespectful behavior toward our staff.
+          </p>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">7. Intellectual Property</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;">
+            All training programs, meal plans, workout guides, and content provided by The Energy Factory are our intellectual property. You may use them for personal use only and may not reproduce, distribute, or sell them without written permission.
+          </p>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">8. Disclaimer of Warranties</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;">
+            Services and products are provided "as is" without warranties of any kind. We do not guarantee specific fitness results, as individual results vary based on effort, genetics, and adherence to programs.
+          </p>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">9. Limitation of Liability</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;">
+            To the maximum extent permitted by law, The Energy Factory shall not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of our services or products.
+          </p>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">10. Governing Law</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;">
+            These Terms of Service are governed by the laws of Vietnam. Any disputes shall be resolved in the courts of Dong Nai Province.
+          </p>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">11. Changes to Terms</h2>
+          <p style="line-height: 1.8; color: #666; margin-bottom: 2rem;">
+            We reserve the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting. Your continued use of our services constitutes acceptance of the updated terms.
+          </p>
+
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">12. Contact Information</h2>
+          <p style="line-height: 1.8; color: #666;">
+            For questions about these Terms of Service, please contact us through our <a href="/contact" style="color: var(--primary); text-decoration: underline;">contact form</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

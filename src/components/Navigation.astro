@@ -27,6 +27,9 @@ const currentPath = Astro.url.pathname;
       <a href={lang === 'en' ? '/about' : '/vi/about'} class:list={['nav-link', { active: currentPath.includes('/about') }]}>
         {t('nav.about')}
       </a>
+      <a href={lang === 'en' ? '/faq' : '/vi/faq'} class:list={['nav-link', { active: currentPath.includes('/faq') }]}>
+        FAQ
+      </a>
       <a href={lang === 'en' ? '/contact' : '/vi/contact'} class:list={['nav-link', { active: currentPath.includes('/contact') }]}>
         {t('nav.contact')}
       </a>

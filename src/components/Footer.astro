@@ -23,6 +23,13 @@ const currentYear = new Date().getFullYear();
         <h4>{t('nav.contact')}</h4>
         <p>{t('location.address')}</p>
       </div>
+      <div class="footer-section">
+        <h4>{lang === 'en' ? 'Quick Links' : 'Liên Kết'}</h4>
+        <a href={lang === 'en' ? '/faq' : '/vi/faq'}>FAQ</a>
+        <a href={lang === 'en' ? '/booking' : '/vi/booking'}>{lang === 'en' ? 'Book a Session' : 'Đặt Lịch'}</a>
+        <a href={lang === 'en' ? '/privacy' : '/privacy'}>{lang === 'en' ? 'Privacy Policy' : 'Chính Sách Bảo Mật'}</a>
+        <a href={lang === 'en' ? '/terms' : '/terms'}>{lang === 'en' ? 'Terms of Service' : 'Điều Khoản Dịch Vụ'}</a>
+      </div>
     </div>
     <div class="footer-bottom">
       <p>© {currentYear} {t('site.title')}. {t('footer.rights')}</p>
