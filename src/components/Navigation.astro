@@ -1,0 +1,103 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="navbar">
+  <div class="container">
+    <a href={lang === 'en' ? '/' : '/vi'} class="logo">
+      <img src="/images/dumbbell-icon.png" alt="Logo" />
+      <span>{t('site.title')}</span>
+    </a>
+    <div class="nav-links">
+      <a href={lang === 'en' ? '/' : '/vi'} class:list={['nav-link', { active: currentPath === '/' || currentPath === '/vi' }]}>
+        {t('nav.home')}
+      </a>
+      <a href={lang === 'en' ? '/services' : '/vi/services'} class:list={['nav-link', { active: currentPath.includes('/services') }]}>
+        {t('nav.services')}
+      </a>
+      <a href={lang === 'en' ? '/locations' : '/vi/locations'} class:list={['nav-link', { active: currentPath.includes('/locations') }]}>
+        {t('nav.locations')}
+      </a>
+      <a href={lang === 'en' ? '/about' : '/vi/about'} class:list={['nav-link', { active: currentPath.includes('/about') }]}>
+        {t('nav.about')}
+      </a>
+      <a href={lang === 'en' ? '/contact' : '/vi/contact'} class:list={['nav-link', { active: currentPath.includes('/contact') }]}>
+        {t('nav.contact')}
+      </a>
+    </div>
+    <LanguageSwitcher />
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    border-bottom-color: white;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+</style>

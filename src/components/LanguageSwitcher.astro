@@ -1,0 +1,47 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl, getPathInLang } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+---
+
+<div class="language-switcher">
+  {Object.entries(languages).map(([code, name]) => (
+    <a 
+      href={getPathInLang(currentPath, code)}
+      class:list={['lang-link', { active: code === lang }]}
+    >
+      {code.toUpperCase()}
+    </a>
+  ))}
+</div>
+
+<style>
+  .language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem;
+    border-radius: 20px;
+  }
+
+  .lang-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+  }
+
+  .lang-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .lang-link.active {
+    background: white;
+    color: #667eea;
+  }
+</style>
