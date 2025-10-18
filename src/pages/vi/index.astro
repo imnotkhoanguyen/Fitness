@@ -1,8 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { useTranslations } from '../i18n/utils';
+import Layout from '../../layouts/Layout.astro';
+import { useTranslations } from '../../i18n/utils';
 
-const t = useTranslations('en');
+const t = useTranslations('vi');
 ---
 
 <Layout title={`${t('site.title')} - ${t('site.tagline')}`}>
@@ -10,7 +10,7 @@ const t = useTranslations('en');
     <div class="container">
       <h1>{t('hero.title')}</h1>
       <p>{t('hero.subtitle')}</p>
-      <a href="/contact" class="btn">{t('hero.cta')}</a>
+      <a href="/vi/contact" class="btn">{t('hero.cta')}</a>
     </div>
   </section>
 
@@ -21,17 +21,17 @@ const t = useTranslations('en');
         <div class="card">
           <h3>{t('services.nutrition.title')}</h3>
           <p>{t('services.nutrition.desc')}</p>
-          <a href="/services" class="btn" style="margin-top: 1rem;">{t('services.cta')}</a>
+          <a href="/vi/services" class="btn" style="margin-top: 1rem;">{t('services.cta')}</a>
         </div>
         <div class="card">
           <h3>{t('services.fitness.title')}</h3>
           <p>{t('services.fitness.desc')}</p>
-          <a href="/services" class="btn" style="margin-top: 1rem;">{t('services.cta')}</a>
+          <a href="/vi/services" class="btn" style="margin-top: 1rem;">{t('services.cta')}</a>
         </div>
         <div class="card">
           <h3>{t('services.lifestyle.title')}</h3>
           <p>{t('services.lifestyle.desc')}</p>
-          <a href="/services" class="btn" style="margin-top: 1rem;">{t('services.cta')}</a>
+          <a href="/vi/services" class="btn" style="margin-top: 1rem;">{t('services.cta')}</a>
         </div>
       </div>
     </div>
@@ -39,11 +39,11 @@ const t = useTranslations('en');
 
   <section class="section">
     <div class="container" style="text-align: center;">
-      <img src="/images/main-guy.png" alt="Fitness" style="max-width: 600px; width: 100%; border-radius: 10px; margin-bottom: 2rem;" />
-      <h2 style="margin-bottom: 1rem;">Why Choose The Energy Factory?</h2>
+      <img src="/images/main-guy.png" alt="Thể dục" style="max-width: 600px; width: 100%; border-radius: 10px; margin-bottom: 2rem;" />
+      <h2 style="margin-bottom: 1rem;">Tại Sao Chọn The Energy Factory?</h2>
       <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #666;">
-        We provide personalized coaching programs designed specifically for your goals and lifestyle. 
-        Our holistic approach combines nutrition, fitness, and lifestyle coaching to help you achieve lasting results.
+        Chúng tôi cung cấp các chương trình huấn luyện cá nhân hóa được thiết kế đặc biệt cho mục tiêu và lối sống của bạn.
+        Phương pháp toàn diện của chúng tôi kết hợp dinh dưỡng, thể dục và huấn luyện lối sống để giúp bạn đạt được kết quả lâu dài.
       </p>
     </div>
   </section>

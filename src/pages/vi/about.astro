@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('vi');
+---
+
+<Layout title={`${t('nav.about')} - ${t('site.title')}`}>
+  <section class="hero">
+    <div class="container">
+      <h1>{t('about.title')}</h1>
+      <p>Trao quyền cho lối sống lành mạnh tại Long Khánh và xa hơn</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="card">
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.mission')}</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: #666;">
+            {t('about.mission.text')}
+          </p>
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.story')}</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+            {t('about.story.text')}
+          </p>
+          <img src="/images/fitness.png" alt="Đội ngũ của chúng tôi" style="width: 100%; border-radius: 10px;" />
+        </div>
+
+        <div style="margin-top: 3rem;">
+          <h2 class="section-title">Phương Pháp Của Chúng Tôi</h2>
+          <div class="grid grid-3">
+            <div class="card">
+              <h3 style="color: var(--primary);">Cá Nhân Hóa</h3>
+              <p>Mỗi khách hàng nhận được một chương trình tùy chỉnh phù hợp với mục tiêu, sở thích và lối sống riêng của họ.</p>
+            </div>
+            <div class="card">
+              <h3 style="color: var(--primary);">Toàn Diện</h3>
+              <p>Chúng tôi giải quyết tất cả các khía cạnh của sức khỏe: dinh dưỡng, thể dục, sức khỏe tinh thần và thói quen sinh hoạt.</p>
+            </div>
+            <div class="card">
+              <h3 style="color: var(--primary);">Bền Vững</h3>
+              <p>Chúng tôi tập trung vào việc tạo ra những thay đổi lâu dài, không phải giải pháp nhanh chóng. Xây dựng thói quen sẽ phục vụ bạn suốt đời.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--light-bg);">
+    <div class="container" style="text-align: center;">
+      <h2 style="margin-bottom: 1rem;">Sẵn Sàng Thay Đổi Cuộc Sống Của Bạn?</h2>
+      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
+        Tham gia cộng đồng những người quan tâm đến sức khỏe tại Long Khánh.
+      </p>
+      <a href="/vi/contact" class="btn">{t('contact.title')}</a>
+    </div>
+  </section>
+</Layout>

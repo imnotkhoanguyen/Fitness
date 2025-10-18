@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('vi');
+---
+
+<Layout title={`${t('nav.services')} - ${t('site.title')}`}>
+  <section class="hero">
+    <div class="container">
+      <h1>{t('services.title')}</h1>
+      <p>Các chương trình huấn luyện toàn diện được điều chỉnh theo nhu cầu của bạn</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>{t('services.nutrition.title')}</h3>
+          <p>{t('services.nutrition.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>Lập kế hoạch bữa ăn cá nhân hóa</li>
+            <li>Phân tích dinh dưỡng</li>
+            <li>Thói quen ăn uống lành mạnh</li>
+            <li>Hướng dẫn bổ sung</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>{t('services.fitness.title')}</h3>
+          <p>{t('services.fitness.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>Kế hoạch tập luyện tùy chỉnh</li>
+            <li>Theo dõi tiến độ</li>
+            <li>Huấn luyện kỹ thuật</li>
+            <li>Lịch tập linh hoạt</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>{t('services.lifestyle.title')}</h3>
+          <p>{t('services.lifestyle.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>Kỹ thuật quản lý căng thẳng</li>
+            <li>Tối ưu hóa giấc ngủ</li>
+            <li>Huấn luyện hình thành thói quen</li>
+            <li>Chiến lược cân bằng công việc-cuộc sống</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--light-bg);">
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title">Sẵn Sàng Bắt Đầu Chuyển Đổi Của Bạn?</h2>
+      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
+        Đặt lịch tư vấn miễn phí ngay hôm nay và khám phá cách chúng tôi có thể giúp bạn đạt được mục tiêu sức khỏe.
+      </p>
+      <a href="/vi/contact" class="btn">{t('contact.title')}</a>
+    </div>
+  </section>
+</Layout>

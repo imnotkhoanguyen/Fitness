@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations('en');
+---
+
+<Layout title={`${t('nav.contact')} - ${t('site.title')}`}>
+  <section class="hero">
+    <div class="container">
+      <h1>{t('contact.title')}</h1>
+      <p>We'd love to hear from you and help you start your wellness journey</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="grid" style="grid-template-columns: 1fr; gap: 2rem;">
+          <div class="card">
+            <h3 style="margin-bottom: 1.5rem;">Send Us a Message</h3>
+            <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div>
+                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">{t('contact.name')}</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem;" />
+              </div>
+              <div>
+                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">{t('contact.email')}</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem;" />
+              </div>
+              <div>
+                <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">{t('contact.message')}</label>
+                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem; resize: vertical;"></textarea>
+              </div>
+              <button type="submit" class="btn" style="align-self: flex-start;">{t('contact.submit')}</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-bottom: 1rem;">Contact Information</h3>
+            <div style="color: #666; line-height: 2;">
+              <p><strong>Location:</strong></p>
+              <p>{t('location.address')}</p>
+              <p style="margin-top: 1rem;"><strong>Hours:</strong></p>
+              <p>Mon-Fri: 6:00 AM - 9:00 PM</p>
+              <p>Sat: 7:00 AM - 8:00 PM</p>
+              <p>Sun: 8:00 AM - 6:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

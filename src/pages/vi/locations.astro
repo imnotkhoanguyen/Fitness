@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('vi');
+---
+
+<Layout title={`${t('nav.locations')} - ${t('site.title')}`}>
+  <section class="hero">
+    <div class="container">
+      <h1>{t('location.title')}</h1>
+      <p>{t('location.description')}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="card">
+          <h3 style="margin-bottom: 1rem;">Địa Điểm Long Khánh</h3>
+          <p style="margin-bottom: 1rem;"><strong>Địa chỉ:</strong> {t('location.address')}</p>
+          <p style="margin-bottom: 1rem; color: #666;">
+            Trung tâm huấn luyện của chúng tôi nằm ở vị trí thuận lợi tại trung tâm Thành Phố Long Khánh,
+            dễ dàng tiếp cận cho cư dân trên khắp tỉnh Đồng Nai.
+          </p>
+          <img src="/images/fitness.png" alt="Trung tâm thể dục" style="width: 100%; border-radius: 10px; margin-top: 1rem;" />
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+          <h3 style="margin-bottom: 1rem;">Giờ Hoạt Động</h3>
+          <table style="width: 100%; color: #666;">
+            <tr style="border-bottom: 1px solid #eee;">
+              <td style="padding: 0.75rem 0;">Thứ Hai - Thứ Sáu</td>
+              <td style="padding: 0.75rem 0; text-align: right;">6:00 SA - 9:00 CH</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+              <td style="padding: 0.75rem 0;">Thứ Bảy</td>
+              <td style="padding: 0.75rem 0; text-align: right;">7:00 SA - 8:00 CH</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.75rem 0;">Chủ Nhật</td>
+              <td style="padding: 0.75rem 0; text-align: right;">8:00 SA - 6:00 CH</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+          <h3 style="margin-bottom: 1rem;">Chỉ Đường</h3>
+          <p style="color: #666; margin-bottom: 1rem;">
+            Chúng tôi phục vụ khách hàng trên khắp Long Khánh và các khu vực xung quanh tỉnh Đồng Nai.
+            Liên hệ với chúng tôi để biết hướng dẫn cụ thể đến địa điểm của chúng tôi.
+          </p>
+          <a href="/vi/contact" class="btn">{t('contact.title')}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

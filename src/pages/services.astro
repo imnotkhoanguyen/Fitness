@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations('en');
+---
+
+<Layout title={`${t('nav.services')} - ${t('site.title')}`}>
+  <section class="hero">
+    <div class="container">
+      <h1>{t('services.title')}</h1>
+      <p>Comprehensive coaching programs tailored to your needs</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>{t('services.nutrition.title')}</h3>
+          <p>{t('services.nutrition.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>Personalized meal planning</li>
+            <li>Nutritional analysis</li>
+            <li>Healthy eating habits</li>
+            <li>Supplement guidance</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>{t('services.fitness.title')}</h3>
+          <p>{t('services.fitness.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>Customized workout plans</li>
+            <li>Progress tracking</li>
+            <li>Form and technique coaching</li>
+            <li>Flexible training schedules</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>{t('services.lifestyle.title')}</h3>
+          <p>{t('services.lifestyle.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>Stress management techniques</li>
+            <li>Sleep optimization</li>
+            <li>Habit formation coaching</li>
+            <li>Work-life balance strategies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--light-bg);">
+    <div class="container" style="text-align: center;">
+      <h2 class="section-title">Ready to Start Your Transformation?</h2>
+      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
+        Schedule your free consultation today and discover how we can help you achieve your health goals.
+      </p>
+      <a href="/contact" class="btn">{t('contact.title')}</a>
+    </div>
+  </section>
+</Layout>

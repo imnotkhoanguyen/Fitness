@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations('en');
+---
+
+<Layout title={`${t('nav.about')} - ${t('site.title')}`}>
+  <section class="hero">
+    <div class="container">
+      <h1>{t('about.title')}</h1>
+      <p>Empowering healthy lifestyles in Long Khanh and beyond</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="card">
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.mission')}</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: #666;">
+            {t('about.mission.text')}
+          </p>
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.story')}</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+            {t('about.story.text')}
+          </p>
+          <img src="/images/fitness.png" alt="Our Team" style="width: 100%; border-radius: 10px;" />
+        </div>
+
+        <div style="margin-top: 3rem;">
+          <h2 class="section-title">Our Approach</h2>
+          <div class="grid grid-3">
+            <div class="card">
+              <h3 style="color: var(--primary);">Personalized</h3>
+              <p>Every client receives a customized program tailored to their unique goals, preferences, and lifestyle.</p>
+            </div>
+            <div class="card">
+              <h3 style="color: var(--primary);">Holistic</h3>
+              <p>We address all aspects of wellness: nutrition, fitness, mental health, and lifestyle habits.</p>
+            </div>
+            <div class="card">
+              <h3 style="color: var(--primary);">Sustainable</h3>
+              <p>We focus on creating lasting changes, not quick fixes. Build habits that will serve you for life.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--light-bg);">
+    <div class="container" style="text-align: center;">
+      <h2 style="margin-bottom: 1rem;">Ready to Transform Your Life?</h2>
+      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
+        Join our community of health-conscious individuals in Long Khanh.
+      </p>
+      <a href="/contact" class="btn">{t('contact.title')}</a>
+    </div>
+  </section>
+</Layout>
