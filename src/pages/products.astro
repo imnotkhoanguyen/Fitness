@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations('en');
+---
+
+<Layout title={`${t('nav.products')} - ${t('site.title')}`}>
+  <section class="hero">
+    <div class="container">
+      <h1>{t('products.title')}</h1>
+      <p>Fuel your training with premium supplements for maximum performance and recovery</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card product-card">
+          <div class="product-badge">Best Seller</div>
+          <h3>{t('products.protein.title')}</h3>
+          <p>{t('products.protein.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>25g+ protein per serving</li>
+            <li>Fast absorption</li>
+            <li>Multiple flavors</li>
+            <li>Whey & plant-based options</li>
+          </ul>
+          <button class="btn" style="margin-top: 1.5rem; width: 100%;">Contact to Order</button>
+        </div>
+        
+        <div class="card product-card">
+          <div class="product-badge">Energy Boost</div>
+          <h3>{t('products.preworkout.title')}</h3>
+          <p>{t('products.preworkout.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>Explosive energy</li>
+            <li>Enhanced focus</li>
+            <li>Pump activators</li>
+            <li>No crash formula</li>
+          </ul>
+          <button class="btn" style="margin-top: 1.5rem; width: 100%;">Contact to Order</button>
+        </div>
+
+        <div class="card product-card">
+          <div class="product-badge">Recovery</div>
+          <h3>{t('products.recovery.title')}</h3>
+          <p>{t('products.recovery.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>BCAA 2:1:1 ratio</li>
+            <li>L-Glutamine</li>
+            <li>Reduce soreness</li>
+            <li>Faster muscle repair</li>
+          </ul>
+          <button class="btn" style="margin-top: 1.5rem; width: 100%;">Contact to Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--light-bg);">
+    <div class="container" style="text-align: center;">
+      <h2 style="margin-bottom: 2rem;">Why Our Supplements?</h2>
+      <div class="grid grid-3">
+        <div>
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Quality Tested</h3>
+          <p style="color: #666;">Every product is tested for purity and potency</p>
+        </div>
+        <div>
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Coaching Approved</h3>
+          <p style="color: #666;">Personally selected for hybrid training results</p>
+        </div>
+        <div>
+          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Real Results</h3>
+          <p style="color: #666;">Proven formulas backed by science and experience</p>
+        </div>
+      </div>
+      <a href="/contact" class="btn" style="margin-top: 2rem;">Ask About Products</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .product-card {
+    position: relative;
+    border-top: 4px solid var(--primary);
+  }
+
+  .product-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+</style>

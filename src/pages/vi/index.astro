@@ -10,7 +10,10 @@ const t = useTranslations('vi');
     <div class="container">
       <h1>{t('hero.title')}</h1>
       <p>{t('hero.subtitle')}</p>
-      <a href="/vi/contact" class="btn">{t('hero.cta')}</a>
+      <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+        <a href="/vi/contact" class="btn">{t('hero.cta')}</a>
+        <a href="/vi/products" class="btn btn-outline">{t('hero.cta2')}</a>
+      </div>
     </div>
   </section>
 
@@ -19,19 +22,37 @@ const t = useTranslations('vi');
       <h2 class="section-title">{t('services.title')}</h2>
       <div class="grid grid-3">
         <div class="card">
-          <h3>{t('services.nutrition.title')}</h3>
-          <p>{t('services.nutrition.desc')}</p>
-          <a href="/vi/services" class="btn" style="margin-top: 1rem;">{t('services.cta')}</a>
+          <h3>{t('services.calisthenics.title')}</h3>
+          <p>{t('services.calisthenics.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>Xà đơn & xà kép</li>
+            <li>Chống đẩy biến thể</li>
+            <li>Kỹ năng nâng cao (planche, lever)</li>
+            <li>Làm chủ core</li>
+          </ul>
+          <a href="/vi/services" class="btn" style="margin-top: 1.5rem;">{t('services.cta')}</a>
         </div>
         <div class="card">
-          <h3>{t('services.fitness.title')}</h3>
-          <p>{t('services.fitness.desc')}</p>
-          <a href="/vi/services" class="btn" style="margin-top: 1rem;">{t('services.cta')}</a>
+          <h3>{t('services.weightlifting.title')}</h3>
+          <p>{t('services.weightlifting.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>Động tác nâng tạ đòn</li>
+            <li>Tập với tạ đơn</li>
+            <li>Máy tập</li>
+            <li>Tăng tải tiến bộ</li>
+          </ul>
+          <a href="/vi/services" class="btn" style="margin-top: 1.5rem;">{t('services.cta')}</a>
         </div>
         <div class="card">
-          <h3>{t('services.lifestyle.title')}</h3>
-          <p>{t('services.lifestyle.desc')}</p>
-          <a href="/vi/services" class="btn" style="margin-top: 1rem;">{t('services.cta')}</a>
+          <h3>{t('services.hybrid.title')}</h3>
+          <p>{t('services.hybrid.desc')}</p>
+          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+            <li>Kế hoạch tập tùy chỉnh</li>
+            <li>Huấn luyện dinh dưỡng</li>
+            <li>Điều chỉnh kỹ thuật</li>
+            <li>Theo dõi tiến độ</li>
+          </ul>
+          <a href="/vi/services" class="btn" style="margin-top: 1.5rem;">{t('services.cta')}</a>
         </div>
       </div>
     </div>
@@ -39,12 +60,49 @@ const t = useTranslations('vi');
 
   <section class="section">
     <div class="container" style="text-align: center;">
-      <img src="/images/main-guy.png" alt="Thể dục" style="max-width: 600px; width: 100%; border-radius: 10px; margin-bottom: 2rem;" />
-      <h2 style="margin-bottom: 1rem;">Tại Sao Chọn The Energy Factory?</h2>
+      <img src="/images/main-guy.png" alt="Tập luyện thể hình" style="max-width: 600px; width: 100%; border-radius: 10px; margin-bottom: 2rem;" />
+      <h2 style="margin-bottom: 1rem;">Tại Sao Tập Hybrid Hiệu Quả</h2>
       <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #666;">
-        Chúng tôi cung cấp các chương trình huấn luyện cá nhân hóa được thiết kế đặc biệt cho mục tiêu và lối sống của bạn.
-        Phương pháp toàn diện của chúng tôi kết hợp dinh dưỡng, thể dục và huấn luyện lối sống để giúp bạn đạt được kết quả lâu dài.
+        Kết hợp calisthenics với tập tạ mang lại lợi ích của cả hai: sức mạnh thực chiến với trọng lượng cơ thể,
+        sức mạnh bùng nổ từ tạ, và thể hình cân đối, vận động viên. Dù bạn 18 hay 45 tuổi, mới bắt đầu hay nâng cao,
+        phương pháp đã được chứng minh này xây dựng thể lực thực tế và bền vững.
       </p>
     </div>
   </section>
+
+  <section class="section" style="background: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title">{t('products.title')}</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>{t('products.protein.title')}</h3>
+          <p>{t('products.protein.desc')}</p>
+          <a href="/vi/products" class="btn" style="margin-top: 1.5rem;">{t('products.cta')}</a>
+        </div>
+        <div class="card">
+          <h3>{t('products.preworkout.title')}</h3>
+          <p>{t('products.preworkout.desc')}</p>
+          <a href="/vi/products" class="btn" style="margin-top: 1.5rem;">{t('products.cta')}</a>
+        </div>
+        <div class="card">
+          <h3>{t('products.recovery.title')}</h3>
+          <p>{t('products.recovery.desc')}</p>
+          <a href="/vi/products" class="btn" style="margin-top: 1.5rem;">{t('products.cta')}</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+
+  .btn-outline:hover {
+    background: white;
+    color: var(--primary);
+  }
+</style>

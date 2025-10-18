@@ -8,10 +8,10 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "HealthAndBeautyBusiness",
+      "@type": ["SportsActivityLocation", "LocalBusiness"],
       "@id": "https://energy-factory-longkhanh.com/#organization",
       "name": "The Energy Factory",
-      "alternateName": lang === 'vi' ? "The Energy Factory - Long Khánh" : "The Energy Factory - Long Khanh",
+      "alternateName": "The Energy Factory - Hybrid Fitness Long Khanh",
       "url": currentUrl,
       "logo": {
         "@type": "ImageObject",
@@ -22,8 +22,8 @@ const schema = {
         "/images/fitness.png"
       ],
       "description": lang === 'vi' 
-        ? "Huấn luyện lối sống lành mạnh chuyên nghiệp tại Thành Phố Long Khánh, Tỉnh Đồng Nai, Việt Nam"
-        : "Professional healthy lifestyle coaching in Long Khanh City, Dong Nai Province, Vietnam",
+        ? "Huấn luyện hybrid fitness chuyên nghiệp kết hợp calisthenics và tập tạ tại Long Khánh. Bao gồm huấn luyện cá nhân, kế hoạch dinh dưỡng và thực phẩm bổ sung cao cấp."
+        : "Professional hybrid fitness coaching combining calisthenics and weight training in Long Khanh. Includes personal training, nutrition coaching, and premium supplements.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Long Khanh City",
@@ -62,68 +62,88 @@ const schema = {
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": lang === 'vi' ? "Dịch Vụ Huấn Luyện" : "Coaching Services",
+        "name": lang === 'vi' ? "Dịch Vụ & Sản Phẩm" : "Services & Products",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": lang === 'vi' ? "Huấn Luyện Dinh Dưỡng" : "Nutrition Coaching",
+              "name": lang === 'vi' ? "Làm Chủ Calisthenics" : "Calisthenics Mastery",
               "description": lang === 'vi' 
-                ? "Kế hoạch bữa ăn cá nhân hóa và hướng dẫn dinh dưỡng cho sức khỏe tối ưu"
-                : "Personalized meal plans and nutrition guidance for optimal health",
-              "provider": {
-                "@id": "https://energy-factory-longkhanh.com/#organization"
-              },
-              "serviceType": "Nutrition Coaching",
-              "category": "Health & Wellness"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": lang === 'vi' ? "Tập Luyện Thể Dục" : "Fitness Training",
-              "description": lang === 'vi'
-                ? "Chương trình tập luyện tùy chỉnh phù hợp với mục tiêu và trình độ của bạn"
-                : "Customized workout programs tailored to your goals and fitness level",
+                ? "Làm chủ các động tác với trọng lượng cơ thể - xà đơn, xà kép, planche và hơn thế nữa"
+                : "Master bodyweight movements - pull-ups, dips, planches, and advanced skills",
               "provider": {
                 "@id": "https://energy-factory-longkhanh.com/#organization"
               },
               "serviceType": "Fitness Training",
-              "category": "Health & Wellness"
+              "category": "Calisthenics Training"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": lang === 'vi' ? "Huấn Luyện Lối Sống" : "Lifestyle Coaching",
+              "name": lang === 'vi' ? "Tập Tạ" : "Weight Training",
               "description": lang === 'vi'
-                ? "Phương pháp toàn diện về sức khỏe bao gồm quản lý căng thẳng và hình thành thói quen"
-                : "Holistic approach to wellness including stress management and habit formation",
+                ? "Tập sức mạnh tiến bộ với tạ đòn, tạ đơn và máy tập"
+                : "Progressive strength training with barbells, dumbbells, and machines",
               "provider": {
                 "@id": "https://energy-factory-longkhanh.com/#organization"
               },
-              "serviceType": "Lifestyle Coaching",
-              "category": "Health & Wellness"
+              "serviceType": "Fitness Training",
+              "category": "Weight Training"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": lang === 'vi' ? "Huấn Luyện Hybrid" : "Hybrid Training Coaching",
+              "description": lang === 'vi'
+                ? "Chương trình cá nhân hóa kết hợp calisthenics và tạ với kế hoạch dinh dưỡng"
+                : "Personalized programs combining calisthenics and weights with nutrition coaching",
+              "provider": {
+                "@id": "https://energy-factory-longkhanh.com/#organization"
+              },
+              "serviceType": "Personal Training",
+              "category": "Hybrid Fitness"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": lang === 'vi' ? "Thực Phẩm Bổ Sung" : "Premium Supplements",
+              "description": lang === 'vi'
+                ? "Protein, pre-workout, BCAA và các sản phẩm phục hồi cao cấp"
+                : "Protein powders, pre-workouts, BCAAs, and recovery supplements",
+              "category": "Sports Nutrition"
             }
           }
         ]
       },
       "knowsAbout": [
-        "Nutrition",
-        "Fitness",
-        "Wellness",
-        "Healthy Lifestyle",
-        "Stress Management",
-        "Habit Formation",
-        "Meal Planning",
-        "Workout Programs"
+        "Calisthenics",
+        "Weight Training",
+        "Powerlifting",
+        "Bodyweight Training",
+        "Nutrition Coaching",
+        "Sports Supplements",
+        "Hybrid Fitness",
+        "Pull-ups",
+        "Planches",
+        "Muscle Building",
+        "Strength Training"
       ],
       "slogan": lang === 'vi' 
-        ? "Trao quyền cho lối sống lành mạnh tại Long Khánh"
-        : "Empowering healthy lifestyles in Long Khanh"
+        ? "Xây dựng sức mạnh. Làm chủ chuyển động. Sống mạnh mẽ."
+        : "Build strength. Master movement. Live powerfully.",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Fitness Enthusiasts",
+        "suggestedMinAge": 18,
+        "suggestedMaxAge": 45
+      }
     },
     {
       "@type": "WebSite",
@@ -131,24 +151,12 @@ const schema = {
       "url": currentUrl,
       "name": "The Energy Factory",
       "description": lang === 'vi'
-        ? "Website chính thức của The Energy Factory - Huấn luyện lối sống lành mạnh tại Long Khánh"
-        : "Official website of The Energy Factory - Healthy lifestyle coaching in Long Khanh",
+        ? "Website chính thức của The Energy Factory - Huấn luyện hybrid fitness tại Long Khánh"
+        : "Official website of The Energy Factory - Hybrid fitness coaching in Long Khanh",
       "publisher": {
         "@id": "https://energy-factory-longkhanh.com/#organization"
       },
       "inLanguage": [lang, lang === 'en' ? 'vi' : 'en']
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://energy-factory-longkhanh.com/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": lang === 'vi' ? "Trang Chủ" : "Home",
-          "item": lang === 'en' ? "/" : "/vi"
-        }
-      ]
     }
   ]
 };

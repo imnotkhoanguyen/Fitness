@@ -9,7 +9,7 @@ const t = useTranslations('en');
   <section class="hero">
     <div class="container">
       <h1>{t('services.title')}</h1>
-      <p>Comprehensive coaching programs tailored to your needs</p>
+      <p>Transform your body with expert hybrid fitness coaching - calisthenics meets weight training</p>
     </div>
   </section>
 
@@ -17,33 +17,44 @@ const t = useTranslations('en');
     <div class="container">
       <div class="grid grid-3">
         <div class="card">
-          <h3>{t('services.nutrition.title')}</h3>
-          <p>{t('services.nutrition.desc')}</p>
-          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
-            <li>Personalized meal planning</li>
-            <li>Nutritional analysis</li>
-            <li>Healthy eating habits</li>
-            <li>Supplement guidance</li>
+          <h3>{t('services.calisthenics.title')}</h3>
+          <p>{t('services.calisthenics.desc')}</p>
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">What You'll Learn:</h4>
+          <ul style="color: #666; line-height: 2;">
+            <li>Perfect pull-up form & progressions</li>
+            <li>Explosive push-up variations</li>
+            <li>Ring dips & advanced bar work</li>
+            <li>Core conditioning</li>
+            <li>Planche & lever progressions</li>
+            <li>Muscle-up technique</li>
           </ul>
         </div>
+        
         <div class="card">
-          <h3>{t('services.fitness.title')}</h3>
-          <p>{t('services.fitness.desc')}</p>
-          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
-            <li>Customized workout plans</li>
-            <li>Progress tracking</li>
-            <li>Form and technique coaching</li>
-            <li>Flexible training schedules</li>
+          <h3>{t('services.weightlifting.title')}</h3>
+          <p>{t('services.weightlifting.desc')}</p>
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Training Focus:</h4>
+          <ul style="color: #666; line-height: 2;">
+            <li>Squat, deadlift, bench press</li>
+            <li>Olympic lift variations</li>
+            <li>Dumbbell complexes</li>
+            <li>Hypertrophy protocols</li>
+            <li>Strength periodization</li>
+            <li>Accessory work</li>
           </ul>
         </div>
+
         <div class="card">
-          <h3>{t('services.lifestyle.title')}</h3>
-          <p>{t('services.lifestyle.desc')}</p>
-          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
-            <li>Stress management techniques</li>
-            <li>Sleep optimization</li>
-            <li>Habit formation coaching</li>
-            <li>Work-life balance strategies</li>
+          <h3>{t('services.hybrid.title')}</h3>
+          <p>{t('services.hybrid.desc')}</p>
+          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Program Includes:</h4>
+          <ul style="color: #666; line-height: 2;">
+            <li>Personalized training split</li>
+            <li>Weekly check-ins</li>
+            <li>Form video analysis</li>
+            <li>Program adjustments</li>
+            <li>Exercise library access</li>
+            <li>24/7 messaging support</li>
           </ul>
         </div>
       </div>
@@ -51,12 +62,65 @@ const t = useTranslations('en');
   </section>
 
   <section class="section" style="background: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title">{t('services.nutrition.title')}</h2>
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="card">
+          <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+            {t('services.nutrition.desc')}
+          </p>
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div>
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Nutrition Planning</h4>
+              <ul style="color: #666; line-height: 2;">
+                <li>Macro calculations</li>
+                <li>Meal timing strategies</li>
+                <li>Supplement protocols</li>
+                <li>Recipe ideas</li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Lifestyle Coaching</h4>
+              <ul style="color: #666; line-height: 2;">
+                <li>Sleep optimization</li>
+                <li>Stress management</li>
+                <li>Habit building</li>
+                <li>Accountability</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container" style="text-align: center;">
-      <h2 class="section-title">Ready to Start Your Transformation?</h2>
+      <h2 class="section-title">Who Is This For?</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3 style="color: var(--primary);">Beginners</h3>
+          <p>New to fitness and want to build a strong foundation with proper form and sustainable habits</p>
+        </div>
+        <div class="card">
+          <h3 style="color: var(--primary);">Intermediate</h3>
+          <p>Have some training experience and ready to take your strength and physique to the next level</p>
+        </div>
+        <div class="card">
+          <h3 style="color: var(--primary);">Advanced</h3>
+          <p>Serious athletes looking to master advanced skills and optimize performance with hybrid training</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--light-bg);">
+    <div class="container" style="text-align: center;">
+      <h2 style="margin-bottom: 1rem;">Ready to Transform Your Fitness?</h2>
       <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
-        Schedule your free consultation today and discover how we can help you achieve your health goals.
+        Join athletes in Long Khanh who are building serious strength with hybrid training
       </p>
-      <a href="/contact" class="btn">{t('contact.title')}</a>
+      <a href="/contact" class="btn" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">{t('contact.title')}</a>
     </div>
   </section>
 </Layout>

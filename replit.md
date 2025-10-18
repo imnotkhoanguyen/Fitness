@@ -1,14 +1,16 @@
 # The Energy Factory - Long Khanh
 
-A professional bilingual (English/Vietnamese) Astro website for a healthy lifestyle coaching business located in Long Khanh City, Dong Nai Province, Vietnam.
+A professional bilingual (English/Vietnamese) Astro website for a hybrid fitness coaching business in Long Khanh City, Dong Nai Province, Vietnam.
 
 ## Overview
 
 This is a modern, fast, and responsive website built with Astro 5.x featuring:
 - **Bilingual Support**: Full English and Vietnamese translations
-- **5 Pages**: Homepage, Services, Locations, About, and Contact
-- **SEO Optimized**: Static site generation for best performance
-- **Responsive Design**: Beautiful on all devices
+- **Hybrid Fitness Focus**: Combines calisthenics and weight training coaching
+- **E-commerce Integration**: Premium supplements catalog
+- **SEO Optimized**: Structured data for local search visibility
+- **Mobile-First**: Responsive design optimized for on-the-go users
+- **Conversion-Focused**: Clear CTAs for coaching and supplement sales
 
 ## Project Structure
 
@@ -28,13 +30,15 @@ This is a modern, fast, and responsive website built with Astro 5.x featuring:
 │   │   └── Layout.astro # Main page layout with SEO meta tags
 │   └── pages/
 │       ├── index.astro  # English homepage
-│       ├── services.astro
-│       ├── locations.astro
-│       ├── about.astro
-│       ├── contact.astro
+│       ├── services.astro  # Coaching programs
+│       ├── products.astro  # Supplements catalog
+│       ├── locations.astro # Long Khanh location
+│       ├── about.astro     # Coach expertise & philosophy
+│       ├── contact.astro   # Lead generation form
 │       └── vi/          # Vietnamese pages
 │           ├── index.astro
 │           ├── services.astro
+│           ├── products.astro
 │           ├── locations.astro
 │           ├── about.astro
 │           └── contact.astro
@@ -47,14 +51,14 @@ This is a modern, fast, and responsive website built with Astro 5.x featuring:
 
 - **2025-10-18**: Initial project setup with Astro 5.x
 - **2025-10-18**: Implemented bilingual i18n (English/Vietnamese)
-- **2025-10-18**: Created all 5 pages in both languages
-- **2025-10-18**: Added responsive navigation and footer components
-- **2025-10-18**: Configured for deployment on Replit
-- **2025-10-18**: Added comprehensive Schema.org markup (JSON-LD) for SEO
-  - HealthAndBeautyBusiness schema with business details
-  - Complete service catalog (Nutrition, Fitness, Lifestyle coaching)
-  - OpeningHours, GeoCoordinates, and local business information
-  - WebSite schema with language alternatives
+- **2025-10-18**: Redesigned for hybrid fitness coaching business
+- **2025-10-18**: Added Products/Supplements page
+- **2025-10-18**: Updated all content for calisthenics & weight training focus
+- **2025-10-18**: Added comprehensive Schema.org markup for SportsActivityLocation
+  - Hybrid fitness business schema
+  - Service catalog (Calisthenics, Weight Training, Hybrid Coaching)
+  - Product catalog (Supplements)
+  - Target audience: 18-45 fitness enthusiasts
   - SEO meta tags (Open Graph, Twitter Cards, keywords)
 
 ## Technology Stack
@@ -87,27 +91,37 @@ npm run preview
 ## Pages
 
 ### English Version
-- `/` - Homepage
-- `/services` - Services page
-- `/locations` - Locations page  
-- `/about` - About page
-- `/contact` - Contact page
+- `/` - Homepage (Hybrid Fitness Focus)
+- `/services` - Coaching programs (Calisthenics, Weight Training, Hybrid, Nutrition)
+- `/products` - Premium supplements catalog
+- `/locations` - Long Khanh training location
+- `/about` - Coach expertise and hybrid fitness philosophy
+- `/contact` - Lead generation form with fitness goals
 
 ### Vietnamese Version
-- `/vi` - Homepage (Trang Chủ)
-- `/vi/services` - Services page (Dịch Vụ)
-- `/vi/locations` - Locations page (Địa Điểm)
-- `/vi/about` - About page (Về Chúng Tôi)
-- `/vi/contact` - Contact page (Liên Hệ)
+- `/vi` - Trang Chủ
+- `/vi/services` - Dịch Vụ Huấn Luyện
+- `/vi/products` - Thực Phẩm Bổ Sung
+- `/vi/locations` - Địa Điểm
+- `/vi/about` - Về Chúng Tôi
+- `/vi/contact` - Liên Hệ
 
 ## Business Information
 
-**The Energy Factory** is a healthy lifestyle coaching business serving Long Khanh City and surrounding areas in Dong Nai Province, Vietnam.
+**The Energy Factory** is a hybrid fitness coaching business specializing in calisthenics and weight training in Long Khanh City, Dong Nai Province, Vietnam.
 
 ### Services Offered
-1. **Nutrition Coaching** - Personalized meal plans and nutrition guidance
-2. **Fitness Training** - Customized workout programs
-3. **Lifestyle Coaching** - Holistic wellness including stress management
+1. **Calisthenics Mastery** - Bodyweight training (pull-ups, dips, planches, muscle-ups)
+2. **Weight Training** - Progressive strength training with barbells, dumbbells, and machines
+3. **Hybrid Coaching** - Personalized programs combining calisthenics and weights
+4. **Nutrition Coaching** - Custom meal plans and eating strategies
+5. **Premium Supplements** - Protein powders, pre-workouts, BCAAs, recovery aids
+
+### Target Audience
+- **Age Range**: 18-45 years old
+- **Experience**: Beginners to advanced fitness enthusiasts
+- **Goals**: Build strength, endurance, muscle mass, and healthy habits
+- **Training Style**: Hybrid approach combining functional bodyweight movements with traditional weight training
 
 ### Location
 Long Khanh City, Dong Nai Province, Vietnam
@@ -119,11 +133,13 @@ Long Khanh City, Dong Nai Province, Vietnam
 
 ## User Preferences
 
-- Business focus: Healthy lifestyle coaching
-- Target audience: Residents of Long Khanh and Dong Nai Province
+- Business focus: Hybrid fitness coaching (calisthenics + weight lifting) + supplement sales
+- Target audience: Fitness enthusiasts aged 18-45 in Long Khanh and Dong Nai Province
 - Languages: English and Vietnamese (equal importance)
-- Design style: Modern, clean, and professional
+- Design style: Professional yet approachable, action-oriented
 - Color scheme: Purple gradient (primary), white (accent)
+- Conversion goals: Generate coaching clients and supplement buyers
+- Mobile-first: Many users access on the go
 
 ## Deployment Configuration
 
@@ -131,3 +147,12 @@ Long Khanh City, Dong Nai Province, Vietnam
 - **Build**: `npm run build`
 - **Serve**: `npx serve dist -l 5000`
 - **Port**: 5000
+
+## GitHub Repository
+
+https://github.com/imnotkhoanguyen/energy-factory-longkhanh
+
+To push updates:
+```bash
+bash git-push.sh
+```

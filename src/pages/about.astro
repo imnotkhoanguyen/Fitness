@@ -9,7 +9,7 @@ const t = useTranslations('en');
   <section class="hero">
     <div class="container">
       <h1>{t('about.title')}</h1>
-      <p>Empowering healthy lifestyles in Long Khanh and beyond</p>
+      <p>{t('footer.tagline')}</p>
     </div>
   </section>
 
@@ -17,6 +17,14 @@ const t = useTranslations('en');
     <div class="container">
       <div style="max-width: 900px; margin: 0 auto;">
         <div class="card">
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.story')}</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+            {t('about.story.text')}
+          </p>
+          <img src="/images/fitness.png" alt="Fitness Training" style="width: 100%; border-radius: 10px;" />
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
           <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.mission')}</h2>
           <p style="font-size: 1.1rem; line-height: 1.8; color: #666;">
             {t('about.mission.text')}
@@ -24,27 +32,23 @@ const t = useTranslations('en');
         </div>
 
         <div class="card" style="margin-top: 2rem;">
-          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.story')}</h2>
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.expertise')}</h2>
           <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
-            {t('about.story.text')}
+            {t('about.expertise.text')}
           </p>
-          <img src="/images/fitness.png" alt="Our Team" style="width: 100%; border-radius: 10px;" />
-        </div>
-
-        <div style="margin-top: 3rem;">
-          <h2 class="section-title">Our Approach</h2>
-          <div class="grid grid-3">
-            <div class="card">
-              <h3 style="color: var(--primary);">Personalized</h3>
-              <p>Every client receives a customized program tailored to their unique goals, preferences, and lifestyle.</p>
+          
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <div>
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Calisthenics Specialist</h4>
+              <p style="color: #666;">Expert in bodyweight mastery, from basics to advanced skills like planches and levers</p>
             </div>
-            <div class="card">
-              <h3 style="color: var(--primary);">Holistic</h3>
-              <p>We address all aspects of wellness: nutrition, fitness, mental health, and lifestyle habits.</p>
+            <div>
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Strength Coach</h4>
+              <p style="color: #666;">Certified in progressive strength training and powerlifting fundamentals</p>
             </div>
-            <div class="card">
-              <h3 style="color: var(--primary);">Sustainable</h3>
-              <p>We focus on creating lasting changes, not quick fixes. Build habits that will serve you for life.</p>
+            <div>
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Nutrition Expert</h4>
+              <p style="color: #666;">Practical nutrition coaching for muscle building, fat loss, and performance</p>
             </div>
           </div>
         </div>
@@ -53,12 +57,35 @@ const t = useTranslations('en');
   </section>
 
   <section class="section" style="background: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title">The Hybrid Fitness Philosophy</h2>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="grid" style="grid-template-columns: 1fr; gap: 2rem;">
+          <div class="card">
+            <h3 style="color: var(--primary);">Balance</h3>
+            <p>Combine the functional strength of calisthenics with the raw power of weight training for complete athletic development.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--primary);">Progression</h3>
+            <p>Every program is designed with clear progression paths, whether you're learning your first pull-up or hitting a new PR.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--primary);">Sustainability</h3>
+            <p>Build habits and routines that fit your lifestyle - no extreme diets or unsustainable training methods.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Ready to Transform Your Life?</h2>
-      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
-        Join our community of health-conscious individuals in Long Khanh.
+      <h2 style="margin-bottom: 1rem;">Train With Me in Long Khanh</h2>
+      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Whether you're just starting your fitness journey or looking to break through plateaus, 
+        I'll create a personalized program that gets you real results.
       </p>
-      <a href="/contact" class="btn">{t('contact.title')}</a>
+      <a href="/contact" class="btn" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">{t('hero.cta')}</a>
     </div>
   </section>
 </Layout>

@@ -9,7 +9,7 @@ const t = useTranslations('vi');
   <section class="hero">
     <div class="container">
       <h1>{t('about.title')}</h1>
-      <p>Trao quyền cho lối sống lành mạnh tại Long Khánh và xa hơn</p>
+      <p>{t('footer.tagline')}</p>
     </div>
   </section>
 
@@ -17,6 +17,14 @@ const t = useTranslations('vi');
     <div class="container">
       <div style="max-width: 900px; margin: 0 auto;">
         <div class="card">
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.story')}</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+            {t('about.story.text')}
+          </p>
+          <img src="/images/fitness.png" alt="Tập luyện thể hình" style="width: 100%; border-radius: 10px;" />
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
           <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.mission')}</h2>
           <p style="font-size: 1.1rem; line-height: 1.8; color: #666;">
             {t('about.mission.text')}
@@ -24,27 +32,23 @@ const t = useTranslations('vi');
         </div>
 
         <div class="card" style="margin-top: 2rem;">
-          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.story')}</h2>
+          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.expertise')}</h2>
           <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
-            {t('about.story.text')}
+            {t('about.expertise.text')}
           </p>
-          <img src="/images/fitness.png" alt="Đội ngũ của chúng tôi" style="width: 100%; border-radius: 10px;" />
-        </div>
-
-        <div style="margin-top: 3rem;">
-          <h2 class="section-title">Phương Pháp Của Chúng Tôi</h2>
-          <div class="grid grid-3">
-            <div class="card">
-              <h3 style="color: var(--primary);">Cá Nhân Hóa</h3>
-              <p>Mỗi khách hàng nhận được một chương trình tùy chỉnh phù hợp với mục tiêu, sở thích và lối sống riêng của họ.</p>
+          
+          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <div>
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Chuyên Gia Calisthenics</h4>
+              <p style="color: #666;">Chuyên gia làm chủ trọng lượng cơ thể, từ cơ bản đến kỹ năng nâng cao như planche và lever</p>
             </div>
-            <div class="card">
-              <h3 style="color: var(--primary);">Toàn Diện</h3>
-              <p>Chúng tôi giải quyết tất cả các khía cạnh của sức khỏe: dinh dưỡng, thể dục, sức khỏe tinh thần và thói quen sinh hoạt.</p>
+            <div>
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Huấn Luyện Viên Sức Mạnh</h4>
+              <p style="color: #666;">Được chứng nhận tập sức mạnh tiến bộ và nền tảng powerlifting</p>
             </div>
-            <div class="card">
-              <h3 style="color: var(--primary);">Bền Vững</h3>
-              <p>Chúng tôi tập trung vào việc tạo ra những thay đổi lâu dài, không phải giải pháp nhanh chóng. Xây dựng thói quen sẽ phục vụ bạn suốt đời.</p>
+            <div>
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Chuyên Gia Dinh Dưỡng</h4>
+              <p style="color: #666;">Huấn luyện dinh dưỡng thực tế để tăng cơ, giảm mỡ và hiệu suất</p>
             </div>
           </div>
         </div>
@@ -53,12 +57,35 @@ const t = useTranslations('vi');
   </section>
 
   <section class="section" style="background: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title">Triết Lý Hybrid Fitness</h2>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="grid" style="grid-template-columns: 1fr; gap: 2rem;">
+          <div class="card">
+            <h3 style="color: var(--primary);">Cân Bằng</h3>
+            <p>Kết hợp sức mạnh thực chiến của calisthenics với sức mạnh thô của tập tạ để phát triển thể thao toàn diện.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--primary);">Tiến Bộ</h3>
+            <p>Mỗi chương trình được thiết kế với lộ trình tiến bộ rõ ràng, dù bạn đang học xà đơn đầu tiên hay đạt PR mới.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--primary);">Bền Vững</h3>
+            <p>Xây dựng thói quen và quy trình phù hợp với lối sống của bạn - không chế độ ăn cực đoan hay phương pháp tập không bền vững.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Sẵn Sàng Thay Đổi Cuộc Sống Của Bạn?</h2>
-      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
-        Tham gia cộng đồng những người quan tâm đến sức khỏe tại Long Khánh.
+      <h2 style="margin-bottom: 1rem;">Tập Với Tôi tại Long Khánh</h2>
+      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Dù bạn mới bắt đầu hành trình thể hình hay đang muốn vượt qua bế tắc,
+        tôi sẽ tạo một chương trình cá nhân hóa giúp bạn có kết quả thực sự.
       </p>
-      <a href="/vi/contact" class="btn">{t('contact.title')}</a>
+      <a href="/vi/contact" class="btn" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">{t('hero.cta')}</a>
     </div>
   </section>
 </Layout>
