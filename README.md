@@ -1,43 +1,67 @@
-# Astro Starter Kit: Minimal
+# The Energy Factory - Long Khanh
 
-```sh
-npm create astro@latest -- --template minimal
+A professional bilingual website for healthy lifestyle coaching in Long Khanh City, Vietnam.
+
+## 🌟 Features
+
+- ✅ Bilingual support (English & Vietnamese)
+- ✅ 5 comprehensive pages (Home, Services, Locations, About, Contact)
+- ✅ Modern, responsive design
+- ✅ Fast performance with Astro
+- ✅ SEO optimized
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🌐 Languages
 
-## 🚀 Project Structure
+Switch between English and Vietnamese using the language switcher in the navigation bar.
 
-Inside of your Astro project, you'll see the following folders and files:
+**English**: `/`, `/services`, `/locations`, `/about`, `/contact`
 
-```text
+**Vietnamese**: `/vi`, `/vi/services`, `/vi/locations`, `/vi/about`, `/vi/contact`
+
+## 📍 About
+
+The Energy Factory provides personalized coaching programs for healthy living in Long Khanh City, Dong Nai Province, Vietnam.
+
+### Services
+- Nutrition Coaching
+- Fitness Training
+- Lifestyle Coaching
+
+### Location
+Long Khanh City, Dong Nai Province, Vietnam
+
+## 🛠️ Built With
+
+- [Astro](https://astro.build) - Web framework
+- TypeScript - Type safety
+- Custom i18n - Internationalization
+
+## 📂 Project Structure
+
+```
 /
-├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/       # Reusable components
+│   ├── i18n/            # Internationalization
+│   ├── layouts/         # Page layouts
+│   └── pages/           # Routes (English & Vietnamese)
+├── public/              # Static assets
+└── astro.config.mjs     # Astro configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 📄 License
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Copyright © 2025 The Energy Factory. All rights reserved.

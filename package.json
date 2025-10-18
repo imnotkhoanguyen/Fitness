@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@octokit/rest": "^22.0.0",
     "astro": "^5.14.6"
   }
 }
