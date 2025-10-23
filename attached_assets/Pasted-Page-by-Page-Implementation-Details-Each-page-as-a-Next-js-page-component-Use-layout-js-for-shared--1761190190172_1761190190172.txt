@@ -1,0 +1,85 @@
+Page-by-Page Implementation Details
+Each page as a Next.js page/component. Use layout.js for shared nav/footer.
+Home Page (pages/index.js)
+
+Layout: Full-width hero with video loop (use <video autoPlay loop muted> or React Player). Below: Scrollable sections in a single-column on mobile, asymmetrical grid on desktop.
+Components:
+
+Hero: <section className="h-screen bg-hero-bg flex items-center justify-center"> <h1 className="text-5xl font-bold">Our Approach</h1> </section>
+Sections: Use Framer Motion for fade-in: <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>...</motion.div>
+CTA: Button with bg-secondary hover:bg-accent.
+
+
+Mobile: Hamburger menu via useState for toggle.
+Code Snippet:
+jsximport { motion } from 'framer-motion';
+
+export default function Home() {
+  return (
+    <div>
+      <header className="fixed top-0 w-full bg-neutral shadow-md">
+        {/* Nav items */}
+      </header>
+      <main>
+        <section className="hero-bg"> {/* Hero video/image */} </section>
+        <section className="grid md:grid-cols-[1fr_2fr] gap-8">
+          <div>Featured Classes</div>
+          <div>Free Trial CTA</div>
+        </section>
+      </main>
+    </div>
+  );
+}
+
+
+About Page (pages/about.js)
+
+Layout: Narrative with embedded images. Top: Split layout (text left, image right). Bottom: Horizontal scroll gallery for values (use CSS overflow-x-auto flex).
+Components: <div className="flex flex-col md:flex-row"> <p className="md:w-1/2">Story</p> <img src="/coach.jpg" className="md:w-1/2" /> </div>
+Gallery: <div className="flex overflow-x-auto space-x-4"> {values.map(v => <card key={v}>...</card>)} </div>
+
+Programs/Workouts Page (pages/programs.js)
+
+Layout: Tabs for phases (use Radix Tabs). Each tab: Step-by-step list with embedded videos (<iframe src="youtube.com/embed/...">).
+Booking: Integrate React Calendar: npm install react-calendar, then <Calendar onChange={handleDate} />.
+Code:
+jsximport { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs';
+
+<Tabs defaultValue="phase1">
+  <TabsList className="flex space-x-4">
+    <TabsTrigger value="phase1">Phase 1</TabsTrigger>
+    {/* More */}
+  </TabsList>
+  <TabsContent value="phase1">
+    <ol className="list-decimal space-y-4"> {/* Steps */} </ol>
+  </TabsContent>
+</Tabs>
+
+
+Blog Page (pages/blog.js)
+
+Layout: Chronological feed (fetch posts via API or static props). Pinned posts at top.
+Components: Masonry grid with react-masonry-css. Each post: <article className="bg-white p-4 shadow-sm"> <img /> <h3>Title</h3> <tags> </article>
+Tags: Chips with bg-primary text-white rounded-full px-2.
+
+Testimonials Page (pages/testimonials.js)
+
+Layout: Photo gallery with overlaid quotes (CSS position: absolute on text).
+Components: Grid grid-cols-1 md:grid-cols-3 gap-4. Each: <div className="relative"> <img /> <blockquote className="absolute bottom-4 left-4 bg-neutral/80 p-2">Quote</blockquote> </div>
+
+Contact Page (pages/contact.js)
+
+Layout: Map-focused (use Google Maps Embed: <iframe src="maps.google.com/maps?...">). Form below with minimal fields.
+Form: Use Formik or native: <form className="space-y-4"> <input type="text" className="border-accent" /> </form>
+Booking Link: <a href="/virtual" className="bg-secondary">Book Consultation</a>
+
+Shop Page (pages/shop.js)
+
+Layout: Product grid with filters (use React state for filtering).
+Components: <select onChange={filterCategory}> <option>Eco-Friendly</option> </select> <div className="grid grid-cols-2 md:grid-cols-4 gap-4"> {products.map(p => <product-card>)} </div>
+
+Dashboard/Login (pages/dashboard.js - protected route)
+
+Auth: Use NextAuth.js for login.
+Layout: Sidebar nav on left (hidden on mobile). Main: Personalized feed with progress visuals (e.g., SVG tree growth via CSS animations).
+Components: Charts with Recharts (npm install recharts): <LineChart data={progressData} />. Nature-themed: Use icons like leaf SVGs colored with --primary.

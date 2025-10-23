@@ -1,0 +1,59 @@
+Color Palette
+Define CSS variables in globals.css or Tailwind config for easy reuse. Inspired by earthy boho palettes from design resources, using hex codes like #556B2F (olive green for accents) and #E2725B (terracotta for CTAs).
+css:root {
+  --primary: #556B2F; /* Dark Olive Green - buttons, accents */
+  --secondary: #E2725B; /* Terracotta - highlights, CTAs */
+  --neutral: #F5F5DC; /* Beige - backgrounds */
+  --text: #000000; /* Black - main text */
+  --accent: #8B4513; /* Saddle Brown - subtle borders/shadows */
+  --background-texture: url('/textures/wood-grain.png'); /* For subtle overlays */
+}
+Extend Tailwind in tailwind.config.js:
+jsmodule.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        // etc.
+      },
+    },
+  },
+};
+Use in components: <button className="bg-primary text-neutral">Enroll</button>.
+
+Typography
+
+Font Family: Lato (fallback: 'sans-serif').
+Weights: 400 (regular) for body, 700 (bold) for headings.
+Sizes (responsive via Tailwind):
+
+H1: text-4xl md:text-5xl (3rem base)
+H2: text-3xl (2.25rem)
+Body: text-base (1rem)
+Small: text-sm (0.875rem)
+
+
+Line Height: 1.5 for body, 1.2 for headings.
+Letter Spacing: tracking-wide for headings to enhance minimalism.
+
+Global setup in globals.css:
+cssbody {
+  font-family: 'Lato', sans-serif;
+  color: var(--text);
+  background-color: var(--neutral);
+}
+
+Global Styles and Layout
+
+Container: Use Tailwind's container mx-auto px-4 for centered content with padding.
+Navigation: Fixed top bar on desktop, hamburger on mobile (use Radix UI Dialog for menu).
+Footer: Simple with social icons, links, and copyright. Use flex for alignment.
+Animations: Subtle (e.g., hover scale-105 with transition duration-300).
+Backgrounds: For textured feel, use CSS gradients or images:
+css.hero-bg {
+  background: linear-gradient(to bottom, var(--neutral), rgba(139,69,19,0.1)), var(--background-texture);
+  background-size: cover;
+}
+
+Asymmetry: Use CSS Grid with uneven columns (e.g., grid-cols-1 md:grid-cols-[1fr_2fr]).
