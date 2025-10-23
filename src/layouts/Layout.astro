@@ -9,7 +9,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Healthy Lifestyle Coaching in Long Khanh' } = Astro.props;
+const { title, description = 'Hybrid Fitness Coaching in Long Khanh - Calisthenics & Weight Training' } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
 
@@ -22,9 +22,13 @@ const lang = getLangFromUrl(Astro.url);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <meta name="keywords" content={lang === 'vi' 
-      ? "huấn luyện dinh dưỡng, tập luyện thể dục, lối sống lành mạnh, Long Khánh, Đồng Nai, coaching, wellness"
-      : "nutrition coaching, fitness training, healthy lifestyle, Long Khanh, Dong Nai, wellness coaching, personal trainer"} />
+      ? "hybrid fitness, calisthenics, tập tạ, huấn luyện thể hình, Long Khánh, Đồng Nai, thực phẩm bổ sung"
+      : "hybrid fitness, calisthenics, weight training, strength training, Long Khanh, Dong Nai, fitness coaching, supplements"} />
     <meta name="author" content="The Energy Factory" />
     
     <meta property="og:title" content={title} />
@@ -43,9 +47,9 @@ const lang = getLangFromUrl(Astro.url);
     
     <SchemaMarkup />
   </head>
-  <body>
+  <body class="bg-primary text-secondary font-body min-h-screen flex flex-col">
     <Navigation />
-    <main>
+    <main class="flex-1">
       <slot />
     </main>
     <Footer />
@@ -53,13 +57,6 @@ const lang = getLangFromUrl(Astro.url);
 </html>
 
 <style is:global>
-  :root {
-    --primary: #667eea;
-    --secondary: #764ba2;
-    --text: #333;
-    --light-bg: #f7fafc;
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -67,72 +64,32 @@ const lang = getLangFromUrl(Astro.url);
   }
 
   html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: var(--text);
-  }
-
-  main {
-    flex: 1;
+    background-color: #000000;
+    color: #FFFFFF;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.2;
-    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 0.025em;
   }
 
   a {
-    color: var(--primary);
+    transition: all 0.3s ease;
   }
 
+  /* Utility classes */
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
-  }
-
-  .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 6rem 2rem;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: white;
-  }
-
-  .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: white;
-    color: var(--primary);
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.3s;
-    border: 2px solid white;
-  }
-
-  .btn:hover {
-    background: transparent;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   }
 
   .section {
@@ -143,8 +100,73 @@ const lang = getLangFromUrl(Astro.url);
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
   }
 
+  /* Dark mode buttons */
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #00FFFF;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    border: 2px solid #00FFFF;
+  }
+
+  .btn:hover {
+    background: transparent;
+    color: #00FFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #00FFFF;
+    border: 2px solid #00FFFF;
+  }
+
+  .btn-outline:hover {
+    background: #00FFFF;
+    color: #000000;
+  }
+
+  /* Cards */
+  .card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: #00FFFF;
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.1);
+  }
+
+  .card h3 {
+    color: #00FFFF;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .card p {
+    color: #cccccc;
+    line-height: 1.8;
+  }
+
+  /* Grid */
   .grid {
     display: grid;
     gap: 2rem;
@@ -154,31 +176,50 @@ const lang = getLangFromUrl(Astro.url);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
-  .card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: all 0.3s;
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: white;
+    padding: 8rem 2rem 6rem;
+    text-align: center;
+    position: relative;
   }
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
   }
 
-  .card h3 {
-    color: var(--primary);
+  .hero h1 {
+    font-size: 3.5rem;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    color: white;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 
-  .card p {
-    color: #666;
-    line-height: 1.8;
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
+  /* Responsive */
   @media (max-width: 768px) {
+    .hero {
+      padding: 6rem 2rem 4rem;
+    }
+
     .hero h1 {
       font-size: 2rem;
     }
@@ -189,6 +230,10 @@ const lang = getLangFromUrl(Astro.url);
 
     .section-title {
       font-size: 2rem;
+    }
+
+    .section {
+      padding: 3rem 1rem;
     }
   }
 </style>

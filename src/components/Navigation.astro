@@ -9,7 +9,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav class="navbar">
-  <div class="container">
+  <div class="nav-container">
     <a href={lang === 'en' ? '/' : '/vi'} class="logo">
       <img src="/images/dumbbell-icon.png" alt="Logo" />
       <span>{t('site.title')}</span>
@@ -40,14 +40,15 @@ const currentPath = Astro.url.pathname;
 
 <style>
   .navbar {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: #000000;
+    box-shadow: 0 2px 20px rgba(0, 255, 255, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid #333333;
   }
 
-  .container {
+  .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 2rem;
@@ -60,15 +61,24 @@ const currentPath = Astro.url.pathname;
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+  }
+
+  .logo:hover {
+    color: #00FFFF;
   }
 
   .logo img {
     width: 40px;
     height: 40px;
+    filter: brightness(0) invert(1);
   }
 
   .nav-links {
@@ -78,21 +88,42 @@ const currentPath = Astro.url.pathname;
   }
 
   .nav-link {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
     padding: 0.5rem 0;
     border-bottom: 2px solid transparent;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00FFFF;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
   }
 
   .nav-link:hover,
   .nav-link.active {
-    border-bottom-color: white;
+    color: #00FFFF;
   }
 
   @media (max-width: 768px) {
-    .container {
+    .nav-container {
       flex-direction: column;
       gap: 1rem;
     }
@@ -101,6 +132,10 @@ const currentPath = Astro.url.pathname;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
+    }
+
+    .nav-link {
+      font-size: 0.75rem;
     }
   }
 </style>
