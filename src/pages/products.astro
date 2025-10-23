@@ -17,84 +17,144 @@ const t = useTranslations('en');
     <div class="container">
       <div class="grid grid-3">
         <div class="card product-card">
-          <div class="product-badge">Best Seller</div>
+          <div class="product-badge best-seller">Best Seller</div>
           <h3>{t('products.protein.title')}</h3>
           <p>{t('products.protein.desc')}</p>
-          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+          <ul class="feature-list">
             <li>25g+ protein per serving</li>
             <li>Fast absorption</li>
             <li>Multiple flavors</li>
             <li>Whey & plant-based options</li>
           </ul>
-          <button class="btn" style="margin-top: 1.5rem; width: 100%;">Contact to Order</button>
+          <button class="btn full-width">Contact to Order</button>
         </div>
         
         <div class="card product-card">
-          <div class="product-badge">Energy Boost</div>
+          <div class="product-badge energy">Energy Boost</div>
           <h3>{t('products.preworkout.title')}</h3>
           <p>{t('products.preworkout.desc')}</p>
-          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+          <ul class="feature-list">
             <li>Explosive energy</li>
             <li>Enhanced focus</li>
             <li>Pump activators</li>
             <li>No crash formula</li>
           </ul>
-          <button class="btn" style="margin-top: 1.5rem; width: 100%;">Contact to Order</button>
+          <button class="btn full-width">Contact to Order</button>
         </div>
 
         <div class="card product-card">
-          <div class="product-badge">Recovery</div>
+          <div class="product-badge recovery">Recovery</div>
           <h3>{t('products.recovery.title')}</h3>
           <p>{t('products.recovery.desc')}</p>
-          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+          <ul class="feature-list">
             <li>BCAA 2:1:1 ratio</li>
             <li>L-Glutamine</li>
             <li>Reduce soreness</li>
             <li>Faster muscle repair</li>
           </ul>
-          <button class="btn" style="margin-top: 1.5rem; width: 100%;">Contact to Order</button>
+          <button class="btn full-width">Contact to Order</button>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
-    <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 2rem;">Why Our Supplements?</h2>
+  <section class="section dark-section center-content">
+    <div class="container">
+      <h2 class="section-title">Why Our Supplements?</h2>
       <div class="grid grid-3">
         <div>
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Quality Tested</h3>
-          <p style="color: #666;">Every product is tested for purity and potency</p>
+          <h3 class="benefit-title">Quality Tested</h3>
+          <p class="benefit-text">Every product is tested for purity and potency</p>
         </div>
         <div>
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Coaching Approved</h3>
-          <p style="color: #666;">Personally selected for hybrid training results</p>
+          <h3 class="benefit-title">Coaching Approved</h3>
+          <p class="benefit-text">Personally selected for hybrid training results</p>
         </div>
         <div>
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Real Results</h3>
-          <p style="color: #666;">Proven formulas backed by science and experience</p>
+          <h3 class="benefit-title">Real Results</h3>
+          <p class="benefit-text">Proven formulas backed by science and experience</p>
         </div>
       </div>
-      <a href="/contact" class="btn" style="margin-top: 2rem;">Ask About Products</a>
+      <a href="/contact" class="btn cta-button">Ask About Products</a>
     </div>
   </section>
 </Layout>
 
 <style>
+  .dark-section {
+    background: #0a0a0a;
+  }
+
+  .center-content {
+    text-align: center;
+  }
+
   .product-card {
     position: relative;
-    border-top: 4px solid var(--primary);
+    border-top: 4px solid #00FFFF;
   }
 
   .product-badge {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: var(--primary);
-    color: white;
+    background: #00FFFF;
+    color: #000000;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .product-badge.energy {
+    background: #FF0080;
+  }
+
+  .product-badge.recovery {
+    background: #00FF88;
+  }
+
+  .feature-list {
+    margin-top: 1rem;
+    color: #cccccc;
+    line-height: 2;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .feature-list li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00FFFF;
+    font-weight: bold;
+  }
+
+  .full-width {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  .benefit-title {
+    color: #00FFFF;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .benefit-text {
+    color: #cccccc;
+  }
+
+  .cta-button {
+    margin-top: 2rem;
   }
 </style>

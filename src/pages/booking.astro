@@ -6,10 +6,10 @@ const t = useTranslations('en');
 ---
 
 <Layout title={`Book a Session - ${t('site.title')}`}>
-  <section class="hero" style="padding: 4rem 0 3rem;">
+  <section class="hero short-hero">
     <div class="container">
       <h1>Book Your Free Consultation</h1>
-      <p style="font-size: 1.1rem; max-width: 700px; margin: 1rem auto 0;">
+      <p class="hero-subtitle">
         Ready to start your hybrid fitness journey? Schedule your free 30-minute consultation to discuss your goals and find the perfect training program.
       </p>
     </div>
@@ -17,11 +17,11 @@ const t = useTranslations('en');
 
   <section class="section">
     <div class="container">
-      <div style="max-width: 900px; margin: 0 auto;">
-        <div class="grid" style="grid-template-columns: 1fr; gap: 2rem;">
+      <div class="content-wrapper">
+        <div class="grid booking-grid">
           <div class="card">
-            <h3 style="margin-bottom: 1rem;">What to Expect:</h3>
-            <ul style="color: #666; line-height: 2.2; margin-bottom: 2rem;">
+            <h3 class="card-title">What to Expect:</h3>
+            <ul class="benefits-list">
               <li>✅ <strong>Free 30-minute consultation</strong> - No commitment required</li>
               <li>✅ <strong>Fitness assessment</strong> - Discuss your current level and goals</li>
               <li>✅ <strong>Program overview</strong> - Learn how hybrid training works for you</li>
@@ -29,50 +29,42 @@ const t = useTranslations('en');
               <li>✅ <strong>Pricing transparency</strong> - Clear explanation of coaching packages</li>
             </ul>
 
-            <div style="background: var(--light-bg); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
-              <h4 style="margin-bottom: 1rem;">Choose Your Booking Method:</h4>
+            <div class="booking-methods">
+              <h4 class="methods-title">Choose Your Booking Method:</h4>
               
-              <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <a href="/contact" class="btn" style="width: 100%; text-align: center; padding: 1rem;">
+              <div class="methods-actions">
+                <a href="/contact" class="btn full-width center-text">
                   📧 Send Inquiry via Contact Form
                 </a>
                 
-                <div style="text-align: center; color: #999; font-style: italic; margin: 0.5rem 0;">
+                <div class="divider">
                   or use the calendar below
                 </div>
               </div>
             </div>
 
-            <div style="border: 2px solid var(--light-bg); border-radius: 10px; padding: 1rem; min-height: 500px; background: white;">
-              <p style="text-align: center; color: #666; padding: 3rem 2rem;">
-                <strong style="display: block; font-size: 1.2rem; margin-bottom: 1rem;">📅 Calendar Booking Coming Soon</strong>
+            <div class="calendar-placeholder">
+              <p class="placeholder-text">
+                <strong class="placeholder-title">📅 Calendar Booking Coming Soon</strong>
                 For now, please use the contact form above to schedule your consultation.
                 I'll respond within 24 hours with available time slots.
               </p>
-              <!-- Future Calendly embed will go here -->
-              <!-- 
-              <div class="calendly-inline-widget" 
-                   data-url="https://calendly.com/YOUR_USERNAME/free-consultation" 
-                   style="min-width:320px;height:630px;">
-              </div>
-              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-              -->
             </div>
           </div>
 
-          <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-            <h3 style="color: white; margin-bottom: 1.5rem;">Available Sessions:</h3>
-            <div style="margin-bottom: 2rem;">
-              <h4 style="color: white; opacity: 0.95; margin-bottom: 0.5rem;">📍 In-Person (Long Khanh)</h4>
-              <p style="opacity: 0.9; line-height: 1.8;">
+          <div class="card availability-card">
+            <h3 class="availability-title">Available Sessions:</h3>
+            <div class="availability-section">
+              <h4 class="session-type">📍 In-Person (Long Khanh)</h4>
+              <p class="session-times">
                 Mon-Fri: 6:00 AM - 9:00 PM<br>
                 Sat: 7:00 AM - 8:00 PM<br>
                 Sun: 8:00 AM - 6:00 PM
               </p>
             </div>
-            <div>
-              <h4 style="color: white; opacity: 0.95; margin-bottom: 0.5rem;">💻 Online Coaching</h4>
-              <p style="opacity: 0.9; line-height: 1.8;">
+            <div class="availability-section">
+              <h4 class="session-type">💻 Online Coaching</h4>
+              <p class="session-times">
                 Flexible scheduling available<br>
                 Video consultations via Zoom/Google Meet<br>
                 Suitable for clients anywhere in Vietnam or abroad
@@ -84,23 +76,23 @@ const t = useTranslations('en');
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
-    <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 2rem;">Not Ready to Book Yet?</h2>
+  <section class="section dark-section">
+    <div class="container center-content">
+      <h2 class="alternatives-title">Not Ready to Book Yet?</h2>
       <div class="grid grid-3">
         <div>
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Browse Services</h3>
-          <p style="color: #666; margin-bottom: 1rem;">Learn about coaching programs</p>
+          <h3 class="alternative-title">Browse Services</h3>
+          <p class="alternative-text">Learn about coaching programs</p>
           <a href="/services" class="btn btn-outline">View Services</a>
         </div>
         <div>
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Read FAQ</h3>
-          <p style="color: #666; margin-bottom: 1rem;">Get answers to common questions</p>
+          <h3 class="alternative-title">Read FAQ</h3>
+          <p class="alternative-text">Get answers to common questions</p>
           <a href="/faq" class="btn btn-outline">View FAQ</a>
         </div>
         <div>
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Shop Supplements</h3>
-          <p style="color: #666; margin-bottom: 1rem;">Browse premium products</p>
+          <h3 class="alternative-title">Shop Supplements</h3>
+          <p class="alternative-text">Browse premium products</p>
           <a href="/products" class="btn btn-outline">View Products</a>
         </div>
       </div>
@@ -109,14 +101,167 @@ const t = useTranslations('en');
 </Layout>
 
 <style>
+  .short-hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 1rem auto 0;
+  }
+
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .card-title {
+    margin-bottom: 1rem;
+    color: #00FFFF;
+    font-size: 1.5rem;
+  }
+
+  .benefits-list {
+    color: #cccccc;
+    line-height: 2.2;
+    margin-bottom: 2rem;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .benefits-list strong {
+    color: #FFFFFF;
+  }
+
+  .booking-methods {
+    background: #0a0a0a;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 1px solid #333333;
+  }
+
+  .methods-title {
+    margin-bottom: 1rem;
+    color: #00FFFF;
+    font-weight: 700;
+  }
+
+  .methods-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .center-text {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .divider {
+    text-align: center;
+    color: #888888;
+    font-style: italic;
+    margin: 0.5rem 0;
+  }
+
+  .calendar-placeholder {
+    border: 2px solid #333333;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 300px;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .placeholder-text {
+    text-align: center;
+    color: #cccccc;
+    padding: 3rem 2rem;
+  }
+
+  .placeholder-title {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #00FFFF;
+  }
+
+  .availability-card {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    border: 2px solid #00FFFF;
+  }
+
+  .availability-title {
+    color: #00FFFF;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .availability-section {
+    margin-bottom: 2rem;
+  }
+
+  .availability-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .session-type {
+    color: #FFFFFF;
+    opacity: 0.95;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .session-times {
+    color: #cccccc;
+    line-height: 1.8;
+  }
+
+  .dark-section {
+    background: #0a0a0a;
+  }
+
+  .center-content {
+    text-align: center;
+  }
+
+  .alternatives-title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .alternative-title {
+    color: #00FFFF;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .alternative-text {
+    color: #cccccc;
+    margin-bottom: 1rem;
+  }
+
   .btn-outline {
     background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    color: #00FFFF;
+    border: 2px solid #00FFFF;
   }
 
   .btn-outline:hover {
-    background: var(--primary);
-    color: white;
+    background: #00FFFF;
+    color: #000000;
   }
 </style>

@@ -93,10 +93,10 @@ const faqs = [
 ---
 
 <Layout title={`FAQ - ${t('site.title')}`}>
-  <section class="hero" style="padding: 4rem 0 3rem;">
+  <section class="hero short-hero">
     <div class="container">
       <h1>Frequently Asked Questions</h1>
-      <p style="font-size: 1.1rem; max-width: 700px; margin: 1rem auto 0;">
+      <p class="hero-subtitle">
         Got questions about coaching, supplements, or how to get started? Find answers below.
       </p>
     </div>
@@ -104,19 +104,19 @@ const faqs = [
 
   <section class="section">
     <div class="container">
-      <div style="max-width: 900px; margin: 0 auto;">
+      <div class="content-wrapper">
         {faqs.map((category) => (
-          <div style="margin-bottom: 3rem;">
-            <h2 style="color: var(--primary); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary);">
+          <div class="faq-category">
+            <h2 class="category-title">
               {category.category}
             </h2>
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div class="questions-wrapper">
               {category.questions.map((faq) => (
-                <div class="card">
-                  <h3 style="color: #333; margin-bottom: 0.75rem; font-size: 1.1rem;">
+                <div class="card faq-card">
+                  <h3 class="question">
                     {faq.q}
                   </h3>
-                  <p style="color: #666; line-height: 1.8;">
+                  <p class="answer">
                     {faq.a}
                   </p>
                 </div>
@@ -128,15 +128,96 @@ const faqs = [
     </div>
   </section>
 
-  <section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+  <section class="section dark-section center-content">
     <div class="container">
-      <h2 style="color: white; margin-bottom: 1rem;">Still Have Questions?</h2>
-      <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">
-        I'm here to help! Reach out and I'll get back to you within 24 hours.
+      <h2 class="cta-title">Still Have Questions?</h2>
+      <p class="cta-subtitle">
+        Can't find what you're looking for? Contact me directly and I'll get back to you within 24 hours.
       </p>
-      <a href="/contact" class="btn" style="background: white; color: var(--primary);">
-        Contact Me
-      </a>
+      <a href="/contact" class="btn btn-large">Get In Touch</a>
     </div>
   </section>
 </Layout>
+
+<style>
+  .short-hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 1rem auto 0;
+  }
+
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faq-category {
+    margin-bottom: 3rem;
+  }
+
+  .category-title {
+    color: #00FFFF;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #00FFFF;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .questions-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .faq-card {
+    transition: all 0.3s ease;
+  }
+
+  .faq-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .question {
+    color: #FFFFFF;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .answer {
+    color: #cccccc;
+    line-height: 1.8;
+  }
+
+  .dark-section {
+    background: #0a0a0a;
+  }
+
+  .center-content {
+    text-align: center;
+  }
+
+  .cta-title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .cta-subtitle {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-large {
+    font-size: 1.1rem;
+    padding: 1.25rem 2.5rem;
+  }
+</style>

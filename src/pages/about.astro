@@ -15,40 +15,40 @@ const t = useTranslations('en');
 
   <section class="section">
     <div class="container">
-      <div style="max-width: 900px; margin: 0 auto;">
+      <div class="content-wrapper">
         <div class="card">
-          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.story')}</h2>
-          <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+          <h2 class="card-title">{t('about.story')}</h2>
+          <p class="large-text">
             {t('about.story.text')}
           </p>
-          <img src="/images/fitness.png" alt="Fitness Training" style="width: 100%; border-radius: 10px;" />
+          <img src="/images/fitness.png" alt="Fitness Training" class="feature-image" />
         </div>
 
-        <div class="card" style="margin-top: 2rem;">
-          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.mission')}</h2>
-          <p style="font-size: 1.1rem; line-height: 1.8; color: #666;">
+        <div class="card">
+          <h2 class="card-title">{t('about.mission')}</h2>
+          <p class="large-text">
             {t('about.mission.text')}
           </p>
         </div>
 
-        <div class="card" style="margin-top: 2rem;">
-          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.expertise')}</h2>
-          <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+        <div class="card">
+          <h2 class="card-title">{t('about.expertise')}</h2>
+          <p class="large-text">
             {t('about.expertise.text')}
           </p>
           
-          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+          <div class="grid expertise-grid">
             <div>
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Calisthenics Specialist</h4>
-              <p style="color: #666;">Expert in bodyweight mastery, from basics to advanced skills like planches and levers</p>
+              <h4 class="expertise-title">Calisthenics Specialist</h4>
+              <p class="expertise-text">Expert in bodyweight mastery, from basics to advanced skills like planches and levers</p>
             </div>
             <div>
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Strength Coach</h4>
-              <p style="color: #666;">Certified in progressive strength training and powerlifting fundamentals</p>
+              <h4 class="expertise-title">Strength Coach</h4>
+              <p class="expertise-text">Certified in progressive strength training and powerlifting fundamentals</p>
             </div>
             <div>
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Nutrition Expert</h4>
-              <p style="color: #666;">Practical nutrition coaching for muscle building, fat loss, and performance</p>
+              <h4 class="expertise-title">Nutrition Expert</h4>
+              <p class="expertise-text">Practical nutrition coaching for muscle building, fat loss, and performance</p>
             </div>
           </div>
         </div>
@@ -56,21 +56,21 @@ const t = useTranslations('en');
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
+  <section class="section dark-section">
     <div class="container">
       <h2 class="section-title">The Hybrid Fitness Philosophy</h2>
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div class="grid" style="grid-template-columns: 1fr; gap: 2rem;">
+      <div class="philosophy-wrapper">
+        <div class="grid philosophy-grid">
           <div class="card">
-            <h3 style="color: var(--primary);">Balance</h3>
+            <h3 class="philosophy-title">Balance</h3>
             <p>Combine the functional strength of calisthenics with the raw power of weight training for complete athletic development.</p>
           </div>
           <div class="card">
-            <h3 style="color: var(--primary);">Progression</h3>
+            <h3 class="philosophy-title">Progression</h3>
             <p>Every program is designed with clear progression paths, whether you're learning your first pull-up or hitting a new PR.</p>
           </div>
           <div class="card">
-            <h3 style="color: var(--primary);">Sustainability</h3>
+            <h3 class="philosophy-title">Sustainability</h3>
             <p>Build habits and routines that fit your lifestyle - no extreme diets or unsustainable training methods.</p>
           </div>
         </div>
@@ -78,14 +78,108 @@ const t = useTranslations('en');
     </div>
   </section>
 
-  <section class="section">
-    <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Train With Me in Long Khanh</h2>
-      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666; max-width: 700px; margin-left: auto; margin-right: auto;">
+  <section class="section center-content">
+    <div class="container">
+      <h2 class="cta-title">Train With Me in Long Khanh</h2>
+      <p class="cta-subtitle">
         Whether you're just starting your fitness journey or looking to break through plateaus, 
         I'll create a personalized program that gets you real results.
       </p>
-      <a href="/contact" class="btn" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">{t('hero.cta')}</a>
+      <a href="/contact" class="btn btn-large">{t('hero.cta')}</a>
     </div>
   </section>
 </Layout>
+
+<style>
+  .dark-section {
+    background: #0a0a0a;
+  }
+
+  .center-content {
+    text-align: center;
+  }
+
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin-bottom: 2rem;
+  }
+
+  .card:last-child {
+    margin-bottom: 0;
+  }
+
+  .card-title {
+    color: #00FFFF;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .large-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-image {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #333333;
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .expertise-title {
+    color: #00FFFF;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .expertise-text {
+    color: #cccccc;
+  }
+
+  .philosophy-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .philosophy-title {
+    color: #00FFFF;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .cta-subtitle {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-large {
+    font-size: 1.1rem;
+    padding: 1.25rem 2.5rem;
+  }
+</style>

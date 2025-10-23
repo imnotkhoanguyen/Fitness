@@ -17,52 +17,52 @@ const t = useTranslations('en');
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
+  <section class="section dark-section">
     <div class="container">
       <h2 class="section-title">{t('services.title')}</h2>
       <div class="grid grid-3">
         <div class="card">
           <h3>{t('services.calisthenics.title')}</h3>
           <p>{t('services.calisthenics.desc')}</p>
-          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+          <ul class="feature-list">
             <li>Pull-ups & chin-ups</li>
             <li>Dips & push variations</li>
             <li>Advanced skills (planches, levers)</li>
             <li>Core mastery</li>
           </ul>
-          <a href="/services" class="btn" style="margin-top: 1.5rem;">{t('services.cta')}</a>
+          <a href="/services" class="btn">{t('services.cta')}</a>
         </div>
         <div class="card">
           <h3>{t('services.weightlifting.title')}</h3>
           <p>{t('services.weightlifting.desc')}</p>
-          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+          <ul class="feature-list">
             <li>Barbell compound lifts</li>
             <li>Dumbbell training</li>
             <li>Machine work</li>
             <li>Progressive overload</li>
           </ul>
-          <a href="/services" class="btn" style="margin-top: 1.5rem;">{t('services.cta')}</a>
+          <a href="/services" class="btn">{t('services.cta')}</a>
         </div>
         <div class="card">
           <h3>{t('services.hybrid.title')}</h3>
           <p>{t('services.hybrid.desc')}</p>
-          <ul style="margin-top: 1rem; color: #666; line-height: 2;">
+          <ul class="feature-list">
             <li>Custom training plans</li>
             <li>Nutrition coaching</li>
             <li>Form corrections</li>
             <li>Progress tracking</li>
           </ul>
-          <a href="/services" class="btn" style="margin-top: 1.5rem;">{t('services.cta')}</a>
+          <a href="/services" class="btn">{t('services.cta')}</a>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container" style="text-align: center;">
-      <img src="/images/main-guy.png" alt="Fitness Training" style="max-width: 600px; width: 100%; border-radius: 10px; margin-bottom: 2rem;" />
-      <h2 style="margin-bottom: 1rem;">Why Hybrid Training Works</h2>
-      <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #666;">
+    <div class="container center-content">
+      <img src="/images/main-guy.png" alt="Fitness Training" class="hero-image" />
+      <h2 class="content-title">Why Hybrid Training Works</h2>
+      <p class="content-description">
         Combining calisthenics with weight training gives you the best of both worlds: functional bodyweight strength, 
         explosive power from weights, and a balanced, athletic physique. Whether you're 18 or 45, beginner or advanced, 
         this proven approach builds real-world fitness that lasts.
@@ -70,33 +70,33 @@ const t = useTranslations('en');
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
+  <section class="section dark-section">
     <div class="container">
       <h2 class="section-title">What Clients Say</h2>
       <div class="grid grid-3">
         <div class="card testimonial">
           <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p style="font-style: italic; color: #666; margin: 1rem 0;">
+          <p class="testimonial-text">
             "I went from struggling with 5 pull-ups to doing muscle-ups in 4 months. The hybrid program transformed my strength and physique completely."
           </p>
-          <p style="font-weight: 600; color: var(--primary);">- Minh T., 28</p>
-          <p style="font-size: 0.9rem; color: #999;">Long Khanh</p>
+          <p class="testimonial-author">- Minh T., 28</p>
+          <p class="testimonial-location">Long Khanh</p>
         </div>
         <div class="card testimonial">
           <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p style="font-style: italic; color: #666; margin: 1rem 0;">
+          <p class="testimonial-text">
             "Best investment in my health. The nutrition coaching and personalized workouts helped me drop 12kg while gaining muscle. Highly recommend!"
           </p>
-          <p style="font-weight: 600; color: var(--primary);">- Hương N., 35</p>
-          <p style="font-size: 0.9rem; color: #999;">Dong Nai</p>
+          <p class="testimonial-author">- Hương N., 35</p>
+          <p class="testimonial-location">Dong Nai</p>
         </div>
         <div class="card testimonial">
           <div class="stars">⭐⭐⭐⭐⭐</div>
-          <p style="font-style: italic; color: #666; margin: 1rem 0;">
+          <p class="testimonial-text">
             "Finally found a coach who understands hybrid training. The combination of calisthenics and weights gave me results I never got from gym alone."
           </p>
-          <p style="font-weight: 600; color: var(--primary);">- Tuấn L., 42</p>
-          <p style="font-size: 0.9rem; color: #999;">HCMC</p>
+          <p class="testimonial-author">- Tuấn L., 42</p>
+          <p class="testimonial-location">HCMC</p>
         </div>
       </div>
     </div>
@@ -109,17 +109,17 @@ const t = useTranslations('en');
         <div class="card">
           <h3>{t('products.protein.title')}</h3>
           <p>{t('products.protein.desc')}</p>
-          <a href="/products" class="btn" style="margin-top: 1.5rem;">{t('products.cta')}</a>
+          <a href="/products" class="btn">{t('products.cta')}</a>
         </div>
         <div class="card">
           <h3>{t('products.preworkout.title')}</h3>
           <p>{t('products.preworkout.desc')}</p>
-          <a href="/products" class="btn" style="margin-top: 1.5rem;">{t('products.cta')}</a>
+          <a href="/products" class="btn">{t('products.cta')}</a>
         </div>
         <div class="card">
           <h3>{t('products.recovery.title')}</h3>
           <p>{t('products.recovery.desc')}</p>
-          <a href="/products" class="btn" style="margin-top: 1.5rem;">{t('products.cta')}</a>
+          <a href="/products" class="btn">{t('products.cta')}</a>
         </div>
       </div>
     </div>
@@ -127,15 +127,59 @@ const t = useTranslations('en');
 </Layout>
 
 <style>
-  .btn-outline {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
+  .dark-section {
+    background: #0a0a0a;
   }
 
-  .btn-outline:hover {
-    background: white;
-    color: var(--primary);
+  .center-content {
+    text-align: center;
+  }
+
+  .hero-image {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 2px solid #333333;
+  }
+
+  .content-title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+  }
+
+  .content-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #cccccc;
+    line-height: 1.8;
+  }
+
+  .feature-list {
+    margin-top: 1rem;
+    color: #cccccc;
+    line-height: 2;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .feature-list li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .feature-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #00FFFF;
+    font-weight: bold;
+  }
+
+  .card .btn {
+    margin-top: 1.5rem;
   }
 
   .testimonial {
@@ -145,5 +189,34 @@ const t = useTranslations('en');
   .stars {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+  }
+
+  .testimonial-text {
+    font-style: italic;
+    color: #cccccc;
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+
+  .testimonial-author {
+    font-weight: 600;
+    color: #00FFFF;
+    margin-top: 1rem;
+  }
+
+  .testimonial-location {
+    font-size: 0.9rem;
+    color: #888888;
+    margin-top: 0.25rem;
+  }
+
+  @media (max-width: 768px) {
+    .content-title {
+      font-size: 2rem;
+    }
+
+    .content-description {
+      font-size: 1rem;
+    }
   }
 </style>

@@ -19,8 +19,8 @@ const t = useTranslations('en');
         <div class="card">
           <h3>{t('services.calisthenics.title')}</h3>
           <p>{t('services.calisthenics.desc')}</p>
-          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">What You'll Learn:</h4>
-          <ul style="color: #666; line-height: 2;">
+          <h4 class="feature-subtitle">What You'll Learn:</h4>
+          <ul class="feature-list">
             <li>Perfect pull-up form & progressions</li>
             <li>Explosive push-up variations</li>
             <li>Ring dips & advanced bar work</li>
@@ -33,8 +33,8 @@ const t = useTranslations('en');
         <div class="card">
           <h3>{t('services.weightlifting.title')}</h3>
           <p>{t('services.weightlifting.desc')}</p>
-          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Training Focus:</h4>
-          <ul style="color: #666; line-height: 2;">
+          <h4 class="feature-subtitle">Training Focus:</h4>
+          <ul class="feature-list">
             <li>Squat, deadlift, bench press</li>
             <li>Olympic lift variations</li>
             <li>Dumbbell complexes</li>
@@ -47,8 +47,8 @@ const t = useTranslations('en');
         <div class="card">
           <h3>{t('services.hybrid.title')}</h3>
           <p>{t('services.hybrid.desc')}</p>
-          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Program Includes:</h4>
-          <ul style="color: #666; line-height: 2;">
+          <h4 class="feature-subtitle">Program Includes:</h4>
+          <ul class="feature-list">
             <li>Personalized training split</li>
             <li>Weekly check-ins</li>
             <li>Form video analysis</li>
@@ -61,18 +61,18 @@ const t = useTranslations('en');
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
+  <section class="section dark-section">
     <div class="container">
       <h2 class="section-title">{t('services.nutrition.title')}</h2>
-      <div style="max-width: 900px; margin: 0 auto;">
+      <div class="content-wrapper">
         <div class="card">
-          <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+          <p class="large-text">
             {t('services.nutrition.desc')}
           </p>
-          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          <div class="grid two-col">
             <div>
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Nutrition Planning</h4>
-              <ul style="color: #666; line-height: 2;">
+              <h4 class="feature-subtitle">Nutrition Planning</h4>
+              <ul class="feature-list">
                 <li>Macro calculations</li>
                 <li>Meal timing strategies</li>
                 <li>Supplement protocols</li>
@@ -80,8 +80,8 @@ const t = useTranslations('en');
               </ul>
             </div>
             <div>
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Lifestyle Coaching</h4>
-              <ul style="color: #666; line-height: 2;">
+              <h4 class="feature-subtitle">Lifestyle Coaching</h4>
+              <ul class="feature-list">
                 <li>Sleep optimization</li>
                 <li>Stress management</li>
                 <li>Habit building</li>
@@ -94,33 +94,110 @@ const t = useTranslations('en');
     </div>
   </section>
 
-  <section class="section">
-    <div class="container" style="text-align: center;">
+  <section class="section center-content">
+    <div class="container">
       <h2 class="section-title">Who Is This For?</h2>
       <div class="grid grid-3">
         <div class="card">
-          <h3 style="color: var(--primary);">Beginners</h3>
+          <h3 class="card-title">Beginners</h3>
           <p>New to fitness and want to build a strong foundation with proper form and sustainable habits</p>
         </div>
         <div class="card">
-          <h3 style="color: var(--primary);">Intermediate</h3>
+          <h3 class="card-title">Intermediate</h3>
           <p>Have some training experience and ready to take your strength and physique to the next level</p>
         </div>
         <div class="card">
-          <h3 style="color: var(--primary);">Advanced</h3>
+          <h3 class="card-title">Advanced</h3>
           <p>Serious athletes looking to master advanced skills and optimize performance with hybrid training</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
-    <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Ready to Transform Your Fitness?</h2>
-      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
+  <section class="section dark-section center-content">
+    <div class="container">
+      <h2 class="cta-title">Ready to Transform Your Fitness?</h2>
+      <p class="cta-subtitle">
         Join athletes in Long Khanh who are building serious strength with hybrid training
       </p>
-      <a href="/contact" class="btn" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">{t('contact.title')}</a>
+      <a href="/contact" class="btn btn-large">{t('contact.title')}</a>
     </div>
   </section>
 </Layout>
+
+<style>
+  .dark-section {
+    background: #0a0a0a;
+  }
+
+  .center-content {
+    text-align: center;
+  }
+
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .large-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .two-col {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-subtitle {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00FFFF;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .feature-list {
+    color: #cccccc;
+    line-height: 2;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .feature-list li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .feature-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #00FFFF;
+    font-weight: bold;
+  }
+
+  .card-title {
+    color: #00FFFF;
+    margin-bottom: 1rem;
+  }
+
+  .cta-title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .cta-subtitle {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-large {
+    font-size: 1.1rem;
+    padding: 1.25rem 2.5rem;
+  }
+</style>

@@ -15,22 +15,22 @@ const t = useTranslations('en');
 
   <section class="section">
     <div class="container">
-      <div style="max-width: 900px; margin: 0 auto;">
-        <div class="grid" style="grid-template-columns: 1fr; gap: 2rem;">
+      <div class="content-wrapper">
+        <div class="grid contact-grid">
           <div class="card">
-            <h3 style="margin-bottom: 1.5rem;">{t('contact.coaching')}</h3>
-            <form style="display: flex; flex-direction: column; gap: 1.5rem;">
-              <div>
-                <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">{t('contact.name')}</label>
-                <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem;" />
+            <h3 class="form-title">{t('contact.coaching')}</h3>
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name" class="form-label">{t('contact.name')}</label>
+                <input type="text" id="name" name="name" required class="form-input" />
               </div>
-              <div>
-                <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">{t('contact.email')}</label>
-                <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem;" />
+              <div class="form-group">
+                <label for="email" class="form-label">{t('contact.email')}</label>
+                <input type="email" id="email" name="email" required class="form-input" />
               </div>
-              <div>
-                <label for="goal" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Fitness Goal</label>
-                <select id="goal" name="goal" style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem;">
+              <div class="form-group">
+                <label for="goal" class="form-label">Fitness Goal</label>
+                <select id="goal" name="goal" class="form-input">
                   <option value="">Select your goal...</option>
                   <option value="muscle">Build Muscle</option>
                   <option value="strength">Get Stronger</option>
@@ -40,48 +40,165 @@ const t = useTranslations('en');
                   <option value="other">Other</option>
                 </select>
               </div>
-              <div>
-                <label for="experience" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Training Experience</label>
-                <select id="experience" name="experience" style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem;">
+              <div class="form-group">
+                <label for="experience" class="form-label">Training Experience</label>
+                <select id="experience" name="experience" class="form-input">
                   <option value="">Select your level...</option>
                   <option value="beginner">Beginner (0-1 year)</option>
                   <option value="intermediate">Intermediate (1-3 years)</option>
                   <option value="advanced">Advanced (3+ years)</option>
                 </select>
               </div>
-              <div>
-                <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">{t('contact.message')}</label>
-                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem; resize: vertical;" placeholder="Tell me about your current routine, challenges, and what you want to achieve..."></textarea>
+              <div class="form-group">
+                <label for="message" class="form-label">{t('contact.message')}</label>
+                <textarea id="message" name="message" rows="5" required class="form-input form-textarea" placeholder="Tell me about your current routine, challenges, and what you want to achieve..."></textarea>
               </div>
-              <button type="submit" class="btn" style="align-self: flex-start; padding: 1rem 2.5rem;">{t('contact.submit')}</button>
+              <button type="submit" class="btn btn-submit">{t('contact.submit')}</button>
             </form>
           </div>
 
-          <div class="card">
-            <h3 style="margin-bottom: 1rem;">Training Location & Hours</h3>
-            <div style="color: #666; line-height: 2;">
-              <p><strong>Location:</strong></p>
-              <p>{t('location.address')}</p>
-              <p style="margin-top: 1rem;"><strong>Session Hours:</strong></p>
-              <p>Mon-Fri: 6:00 AM - 9:00 PM</p>
-              <p>Sat: 7:00 AM - 8:00 PM</p>
-              <p>Sun: 8:00 AM - 6:00 PM</p>
-              <p style="margin-top: 1rem;"><strong>Services:</strong></p>
-              <p>✅ 1-on-1 Coaching</p>
-              <p>✅ Online Programs</p>
-              <p>✅ Nutrition Coaching</p>
-              <p>✅ Supplement Sales</p>
+          <div class="card info-card">
+            <h3 class="info-title">Training Location & Hours</h3>
+            <div class="info-content">
+              <p class="info-label">Location:</p>
+              <p class="info-text">{t('location.address')}</p>
+              <p class="info-label">Session Hours:</p>
+              <p class="info-text">Mon-Fri: 6:00 AM - 9:00 PM</p>
+              <p class="info-text">Sat: 7:00 AM - 8:00 PM</p>
+              <p class="info-text">Sun: 8:00 AM - 6:00 PM</p>
+              <p class="info-label">Services:</p>
+              <p class="info-text">✅ 1-on-1 Coaching</p>
+              <p class="info-text">✅ Online Programs</p>
+              <p class="info-text">✅ Nutrition Coaching</p>
+              <p class="info-text">✅ Supplement Sales</p>
             </div>
           </div>
 
-          <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-            <h3 style="margin-bottom: 1rem; color: white;">Quick Questions?</h3>
-            <p style="margin-bottom: 1rem;">Want to know about pricing, programs, or supplement availability?</p>
-            <p style="margin-bottom: 1rem;">Fill out the form above or send a quick message with your questions. I typically respond within 24 hours.</p>
-            <p style="font-size: 0.9rem; opacity: 0.9;">💪 First consultation is always free</p>
+          <div class="card cta-card">
+            <h3 class="cta-card-title">Quick Questions?</h3>
+            <p class="cta-card-text">Want to know about pricing, programs, or supplement availability?</p>
+            <p class="cta-card-text">Fill out the form above or send a quick message with your questions. I typically respond within 24 hours.</p>
+            <p class="cta-card-footer">💪 First consultation is always free</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .form-title {
+    margin-bottom: 1.5rem;
+    color: #00FFFF;
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #333333;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #1a1a1a;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: #00FFFF;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  }
+
+  .form-textarea {
+    resize: vertical;
+  }
+
+  .btn-submit {
+    align-self: flex-start;
+    padding: 1rem 2.5rem;
+  }
+
+  .info-card {
+    background: #0a0a0a;
+    border-left: 4px solid #00FFFF;
+  }
+
+  .info-title {
+    margin-bottom: 1rem;
+    color: #00FFFF;
+    font-size: 1.3rem;
+  }
+
+  .info-content {
+    color: #cccccc;
+    line-height: 2;
+  }
+
+  .info-label {
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .info-label:first-child {
+    margin-top: 0;
+  }
+
+  .info-text {
+    color: #cccccc;
+  }
+
+  .cta-card {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    border: 2px solid #00FFFF;
+  }
+
+  .cta-card-title {
+    margin-bottom: 1rem;
+    color: #00FFFF;
+    font-size: 1.3rem;
+  }
+
+  .cta-card-text {
+    margin-bottom: 1rem;
+    color: #cccccc;
+  }
+
+  .cta-card-footer {
+    font-size: 0.9rem;
+    color: #00FFFF;
+    font-weight: 600;
+    margin-top: 1.5rem;
+  }
+</style>
