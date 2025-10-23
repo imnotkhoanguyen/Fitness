@@ -55,6 +55,15 @@ This is a modern, fast, and responsive website built with Astro 5.x featuring:
 
 ## Recent Changes
 
+- **2025-10-23**: Complete dark mode minimalist redesign across all pages
+  - Implemented sleek black/white/cyan color scheme inspired by IronGrind and TRIBE Boxing Gym
+  - Added Tailwind CSS v3 for modern styling utilities
+  - Integrated Google Fonts: Montserrat (headings) and Roboto (body text)
+  - Redesigned all 9 English pages with dark theme
+  - Redesigned all 7 Vietnamese pages with matching dark mode styling
+  - Updated Navigation and Footer components with neon cyan accents
+  - Added dark cards with subtle borders and hover animations
+  - Implemented colorful product badges (cyan, pink, green)
 - **2025-10-18**: Initial project setup with Astro 5.x
 - **2025-10-18**: Implemented bilingual i18n (English/Vietnamese)
 - **2025-10-18**: Redesigned for hybrid fitness coaching business
@@ -71,7 +80,8 @@ This is a modern, fast, and responsive website built with Astro 5.x featuring:
 
 - **Framework**: Astro 5.14.6
 - **Language**: TypeScript (strict mode)
-- **Styling**: Scoped CSS (component-level)
+- **Styling**: Tailwind CSS v3 + Scoped CSS (component-level)
+- **Fonts**: Google Fonts (Montserrat, Roboto)
 - **i18n**: Custom implementation with Astro's built-in routing
 - **SEO**: Schema.org JSON-LD markup, Open Graph, Twitter Cards
 - **Deployment**: Replit Autoscale (static site)
@@ -150,8 +160,10 @@ Long Khanh City, Dong Nai Province, Vietnam
 - Business focus: Hybrid fitness coaching (calisthenics + weight lifting) + supplement sales
 - Target audience: Fitness enthusiasts aged 18-45 in Long Khanh and Dong Nai Province
 - Languages: English and Vietnamese (equal importance)
-- Design style: Professional yet approachable, action-oriented
-- Color scheme: Purple gradient (primary), white (accent)
+- Design style: Dark mode minimalist, intense and powerful aesthetic
+- Color scheme: Black background (#000000), white text (#FFFFFF), neon cyan accents (#00FFFF)
+- Design inspiration: IronGrind, TRIBE Boxing Gym - intense fitness brands
+- Typography: Montserrat (bold headings), Roboto (clean body text)
 - Conversion goals: Generate coaching clients and supplement buyers
 - Mobile-first: Many users access on the go
 
