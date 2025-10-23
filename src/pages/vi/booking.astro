@@ -6,10 +6,10 @@ const t = useTranslations('vi');
 ---
 
 <Layout title={`Đặt Lịch - ${t('site.title')}`}>
-  <section class="hero" style="padding: 4rem 0 3rem;">
+  <section class="hero short-hero">
     <div class="container">
       <h1>Đặt Lịch Tư Vấn Miễn Phí</h1>
-      <p style="font-size: 1.1rem; max-width: 700px; margin: 1rem auto 0;">
+      <p class="hero-subtitle">
         Sẵn sàng bắt đầu hành trình hybrid fitness? Lên lịch tư vấn miễn phí 30 phút để thảo luận mục tiêu và tìm chương trình tập luyện hoàn hảo.
       </p>
     </div>
@@ -17,11 +17,11 @@ const t = useTranslations('vi');
 
   <section class="section">
     <div class="container">
-      <div style="max-width: 900px; margin: 0 auto;">
-        <div class="grid" style="grid-template-columns: 1fr; gap: 2rem;">
+      <div class="content-wrapper">
+        <div class="grid booking-grid">
           <div class="card">
-            <h3 style="margin-bottom: 1rem;">Những Gì Bạn Nhận Được:</h3>
-            <ul style="color: #666; line-height: 2.2; margin-bottom: 2rem;">
+            <h3 class="card-title">Những Gì Bạn Nhận Được:</h3>
+            <ul class="benefits-list">
               <li>✅ <strong>Tư vấn miễn phí 30 phút</strong> - Không cần cam kết</li>
               <li>✅ <strong>Đánh giá thể lực</strong> - Thảo luận trình độ và mục tiêu hiện tại</li>
               <li>✅ <strong>Tổng quan chương trình</strong> - Tìm hiểu tập hybrid phù hợp với bạn</li>
@@ -29,42 +29,42 @@ const t = useTranslations('vi');
               <li>✅ <strong>Giá cả minh bạch</strong> - Giải thích rõ ràng các gói huấn luyện</li>
             </ul>
 
-            <div style="background: var(--light-bg); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
-              <h4 style="margin-bottom: 1rem;">Chọn Cách Đặt Lịch:</h4>
+            <div class="booking-methods">
+              <h4 class="methods-title">Chọn Cách Đặt Lịch:</h4>
               
-              <div style="display: flex; flex-direction: column; gap: 1rem;">
-                <a href="/vi/contact" class="btn" style="width: 100%; text-align: center; padding: 1rem;">
+              <div class="methods-actions">
+                <a href="/vi/contact" class="btn full-width center-text">
                   📧 Gửi Yêu Cầu Qua Form Liên Hệ
                 </a>
                 
-                <div style="text-align: center; color: #999; font-style: italic; margin: 0.5rem 0;">
+                <div class="divider">
                   hoặc sử dụng lịch bên dưới
                 </div>
               </div>
             </div>
 
-            <div style="border: 2px solid var(--light-bg); border-radius: 10px; padding: 1rem; min-height: 500px; background: white;">
-              <p style="text-align: center; color: #666; padding: 3rem 2rem;">
-                <strong style="display: block; font-size: 1.2rem; margin-bottom: 1rem;">📅 Đặt Lịch Qua Lịch Sắp Ra Mắt</strong>
+            <div class="calendar-placeholder">
+              <p class="placeholder-text">
+                <strong class="placeholder-title">📅 Đặt Lịch Qua Lịch Sắp Ra Mắt</strong>
                 Hiện tại, vui lòng sử dụng form liên hệ ở trên để đặt lịch tư vấn.
                 Tôi sẽ phản hồi trong vòng 24 giờ với các khung giờ có sẵn.
               </p>
             </div>
           </div>
 
-          <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-            <h3 style="color: white; margin-bottom: 1.5rem;">Buổi Tập Có Sẵn:</h3>
-            <div style="margin-bottom: 2rem;">
-              <h4 style="color: white; opacity: 0.95; margin-bottom: 0.5rem;">📍 Trực Tiếp (Long Khánh)</h4>
-              <p style="opacity: 0.9; line-height: 1.8;">
+          <div class="card availability-card">
+            <h3 class="availability-title">Buổi Tập Có Sẵn:</h3>
+            <div class="availability-section">
+              <h4 class="session-type">📍 Trực Tiếp (Long Khánh)</h4>
+              <p class="session-times">
                 T2-T6: 6:00 SA - 9:00 CH<br>
                 T7: 7:00 SA - 8:00 CH<br>
                 CN: 8:00 SA - 6:00 CH
               </p>
             </div>
-            <div>
-              <h4 style="color: white; opacity: 0.95; margin-bottom: 0.5rem;">💻 Huấn Luyện Online</h4>
-              <p style="opacity: 0.9; line-height: 1.8;">
+            <div class="availability-section">
+              <h4 class="session-type">💻 Huấn Luyện Online</h4>
+              <p class="session-times">
                 Lịch linh hoạt<br>
                 Tư vấn video qua Zoom/Google Meet<br>
                 Phù hợp cho học viên ở bất kỳ đâu tại Việt Nam hoặc nước ngoài
@@ -76,23 +76,23 @@ const t = useTranslations('vi');
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
-    <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 2rem;">Chưa Sẵn Sàng Đặt Lịch?</h2>
+  <section class="section dark-section">
+    <div class="container center-content">
+      <h2 class="alternatives-title">Chưa Sẵn Sàng Đặt Lịch?</h2>
       <div class="grid grid-3">
         <div>
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Xem Dịch Vụ</h3>
-          <p style="color: #666; margin-bottom: 1rem;">Tìm hiểu chương trình huấn luyện</p>
+          <h3 class="alternative-title">Xem Dịch Vụ</h3>
+          <p class="alternative-text">Tìm hiểu chương trình huấn luyện</p>
           <a href="/vi/services" class="btn btn-outline">Xem Dịch Vụ</a>
         </div>
         <div>
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Đọc FAQ</h3>
-          <p style="color: #666; margin-bottom: 1rem;">Nhận câu trả lời cho câu hỏi thường gặp</p>
+          <h3 class="alternative-title">Đọc FAQ</h3>
+          <p class="alternative-text">Nhận câu trả lời cho câu hỏi thường gặp</p>
           <a href="/vi/faq" class="btn btn-outline">Xem FAQ</a>
         </div>
         <div>
-          <h3 style="color: var(--primary); margin-bottom: 0.5rem;">Mua Thực Phẩm Bổ Sung</h3>
-          <p style="color: #666; margin-bottom: 1rem;">Xem sản phẩm cao cấp</p>
+          <h3 class="alternative-title">Mua Thực Phẩm Bổ Sung</h3>
+          <p class="alternative-text">Xem sản phẩm cao cấp</p>
           <a href="/vi/products" class="btn btn-outline">Xem Sản Phẩm</a>
         </div>
       </div>
@@ -101,14 +101,167 @@ const t = useTranslations('vi');
 </Layout>
 
 <style>
+  .short-hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 1rem auto 0;
+  }
+
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .card-title {
+    margin-bottom: 1rem;
+    color: #00FFFF;
+    font-size: 1.5rem;
+  }
+
+  .benefits-list {
+    color: #cccccc;
+    line-height: 2.2;
+    margin-bottom: 2rem;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .benefits-list strong {
+    color: #FFFFFF;
+  }
+
+  .booking-methods {
+    background: #0a0a0a;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    border: 1px solid #333333;
+  }
+
+  .methods-title {
+    margin-bottom: 1rem;
+    color: #00FFFF;
+    font-weight: 700;
+  }
+
+  .methods-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .center-text {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .divider {
+    text-align: center;
+    color: #888888;
+    font-style: italic;
+    margin: 0.5rem 0;
+  }
+
+  .calendar-placeholder {
+    border: 2px solid #333333;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 300px;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .placeholder-text {
+    text-align: center;
+    color: #cccccc;
+    padding: 3rem 2rem;
+  }
+
+  .placeholder-title {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #00FFFF;
+  }
+
+  .availability-card {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    border: 2px solid #00FFFF;
+  }
+
+  .availability-title {
+    color: #00FFFF;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .availability-section {
+    margin-bottom: 2rem;
+  }
+
+  .availability-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .session-type {
+    color: #FFFFFF;
+    opacity: 0.95;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .session-times {
+    color: #cccccc;
+    line-height: 1.8;
+  }
+
+  .dark-section {
+    background: #0a0a0a;
+  }
+
+  .center-content {
+    text-align: center;
+  }
+
+  .alternatives-title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .alternative-title {
+    color: #00FFFF;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .alternative-text {
+    color: #cccccc;
+    margin-bottom: 1rem;
+  }
+
   .btn-outline {
     background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    color: #00FFFF;
+    border: 2px solid #00FFFF;
   }
 
   .btn-outline:hover {
-    background: var(--primary);
-    color: white;
+    background: #00FFFF;
+    color: #000000;
   }
 </style>

@@ -19,8 +19,8 @@ const t = useTranslations('vi');
         <div class="card">
           <h3>{t('services.calisthenics.title')}</h3>
           <p>{t('services.calisthenics.desc')}</p>
-          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Bạn Sẽ Học:</h4>
-          <ul style="color: #666; line-height: 2;">
+          <h4 class="feature-subtitle">Bạn Sẽ Học:</h4>
+          <ul class="feature-list">
             <li>Kỹ thuật xà đơn hoàn hảo</li>
             <li>Chống đẩy biến thể</li>
             <li>Xà kép & xà đơn nâng cao</li>
@@ -33,8 +33,8 @@ const t = useTranslations('vi');
         <div class="card">
           <h3>{t('services.weightlifting.title')}</h3>
           <p>{t('services.weightlifting.desc')}</p>
-          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Tập Trung Tập Luyện:</h4>
-          <ul style="color: #666; line-height: 2;">
+          <h4 class="feature-subtitle">Tập Trung Tập Luyện:</h4>
+          <ul class="feature-list">
             <li>Squat, deadlift, bench press</li>
             <li>Động tác Olympic</li>
             <li>Phức hợp tạ đơn</li>
@@ -47,8 +47,8 @@ const t = useTranslations('vi');
         <div class="card">
           <h3>{t('services.hybrid.title')}</h3>
           <p>{t('services.hybrid.desc')}</p>
-          <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Chương Trình Bao Gồm:</h4>
-          <ul style="color: #666; line-height: 2;">
+          <h4 class="feature-subtitle">Chương Trình Bao Gồm:</h4>
+          <ul class="feature-list">
             <li>Phân chia tập tùy chỉnh</li>
             <li>Kiểm tra hàng tuần</li>
             <li>Phân tích video kỹ thuật</li>
@@ -61,18 +61,18 @@ const t = useTranslations('vi');
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
+  <section class="section dark-section">
     <div class="container">
       <h2 class="section-title">{t('services.nutrition.title')}</h2>
-      <div style="max-width: 900px; margin: 0 auto;">
+      <div class="content-wrapper">
         <div class="card">
-          <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+          <p class="large-text">
             {t('services.nutrition.desc')}
           </p>
-          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          <div class="grid two-col">
             <div>
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Kế Hoạch Dinh Dưỡng</h4>
-              <ul style="color: #666; line-height: 2;">
+              <h4 class="feature-subtitle">Kế Hoạch Dinh Dưỡng</h4>
+              <ul class="feature-list">
                 <li>Tính toán macro</li>
                 <li>Chiến lược thời gian ăn</li>
                 <li>Quy trình bổ sung</li>
@@ -80,12 +80,12 @@ const t = useTranslations('vi');
               </ul>
             </div>
             <div>
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Huấn Luyện Lối Sống</h4>
-              <ul style="color: #666; line-height: 2;">
+              <h4 class="feature-subtitle">Huấn Luyện Lối Sống</h4>
+              <ul class="feature-list">
                 <li>Tối ưu giấc ngủ</li>
                 <li>Quản lý căng thẳng</li>
                 <li>Xây dựng thói quen</li>
-                <li>Trách nhiệm giải trình</li>
+                <li>Trách nhiệm</li>
               </ul>
             </div>
           </div>
@@ -94,33 +94,110 @@ const t = useTranslations('vi');
     </div>
   </section>
 
-  <section class="section">
-    <div class="container" style="text-align: center;">
+  <section class="section center-content">
+    <div class="container">
       <h2 class="section-title">Dành Cho Ai?</h2>
       <div class="grid grid-3">
         <div class="card">
-          <h3 style="color: var(--primary);">Người Mới Bắt Đầu</h3>
-          <p>Mới với thể hình và muốn xây dựng nền tảng vững chắc với kỹ thuật đúng và thói quen bền vững</p>
+          <h3 class="card-title">Người Mới Bắt Đầu</h3>
+          <p>Mới tập và muốn xây dựng nền tảng vững chắc với kỹ thuật đúng và thói quen bền vững</p>
         </div>
         <div class="card">
-          <h3 style="color: var(--primary);">Trung Cấp</h3>
-          <p>Có kinh nghiệm tập luyện và sẵn sàng đưa sức mạnh và thể hình lên tầm cao mới</p>
+          <h3 class="card-title">Trung Cấp</h3>
+          <p>Đã có kinh nghiệm tập luyện và sẵn sàng đưa sức mạnh và thể hình lên tầm cao mới</p>
         </div>
         <div class="card">
-          <h3 style="color: var(--primary);">Nâng Cao</h3>
+          <h3 class="card-title">Nâng Cao</h3>
           <p>Vận động viên nghiêm túc muốn làm chủ kỹ năng nâng cao và tối ưu hiệu suất với tập hybrid</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
-    <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Sẵn Sàng Thay Đổi Thể Hình?</h2>
-      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
-        Tham gia cùng các vận động viên tại Long Khánh đang xây dựng sức mạnh nghiêm túc với tập hybrid
+  <section class="section dark-section center-content">
+    <div class="container">
+      <h2 class="cta-title">Sẵn Sàng Thay Đổi Thể Lực?</h2>
+      <p class="cta-subtitle">
+        Tham gia các vận động viên tại Long Khánh đang xây dựng sức mạnh nghiêm túc với tập hybrid
       </p>
-      <a href="/vi/contact" class="btn" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">{t('contact.title')}</a>
+      <a href="/vi/contact" class="btn btn-large">{t('contact.title')}</a>
     </div>
   </section>
 </Layout>
+
+<style>
+  .dark-section {
+    background: #0a0a0a;
+  }
+
+  .center-content {
+    text-align: center;
+  }
+
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .large-text {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .two-col {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-subtitle {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00FFFF;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .feature-list {
+    color: #cccccc;
+    line-height: 2;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .feature-list li {
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .feature-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #00FFFF;
+    font-weight: bold;
+  }
+
+  .card-title {
+    color: #00FFFF;
+    margin-bottom: 1rem;
+  }
+
+  .cta-title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .cta-subtitle {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-large {
+    font-size: 1.1rem;
+    padding: 1.25rem 2.5rem;
+  }
+</style>

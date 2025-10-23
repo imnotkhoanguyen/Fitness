@@ -15,40 +15,40 @@ const t = useTranslations('vi');
 
   <section class="section">
     <div class="container">
-      <div style="max-width: 900px; margin: 0 auto;">
+      <div class="content-wrapper">
         <div class="card">
-          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.story')}</h2>
-          <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+          <h2 class="card-title">{t('about.story')}</h2>
+          <p class="large-text">
             {t('about.story.text')}
           </p>
-          <img src="/images/fitness.png" alt="Tập luyện thể hình" style="width: 100%; border-radius: 10px;" />
+          <img src="/images/fitness.png" alt="Tập luyện thể hình" class="feature-image" />
         </div>
 
-        <div class="card" style="margin-top: 2rem;">
-          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.mission')}</h2>
-          <p style="font-size: 1.1rem; line-height: 1.8; color: #666;">
+        <div class="card">
+          <h2 class="card-title">{t('about.mission')}</h2>
+          <p class="large-text">
             {t('about.mission.text')}
           </p>
         </div>
 
-        <div class="card" style="margin-top: 2rem;">
-          <h2 style="color: var(--primary); margin-bottom: 1rem;">{t('about.expertise')}</h2>
-          <p style="font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+        <div class="card">
+          <h2 class="card-title">{t('about.expertise')}</h2>
+          <p class="large-text">
             {t('about.expertise.text')}
           </p>
           
-          <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+          <div class="grid expertise-grid">
             <div>
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Chuyên Gia Calisthenics</h4>
-              <p style="color: #666;">Chuyên gia làm chủ trọng lượng cơ thể, từ cơ bản đến kỹ năng nâng cao như planche và lever</p>
+              <h4 class="expertise-title">Chuyên Gia Calisthenics</h4>
+              <p class="expertise-text">Chuyên gia làm chủ trọng lượng cơ thể, từ cơ bản đến kỹ năng nâng cao như planche và lever</p>
             </div>
             <div>
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Huấn Luyện Viên Sức Mạnh</h4>
-              <p style="color: #666;">Được chứng nhận tập sức mạnh tiến bộ và nền tảng powerlifting</p>
+              <h4 class="expertise-title">Huấn Luyện Viên Sức Mạnh</h4>
+              <p class="expertise-text">Được chứng nhận tập sức mạnh tiến bộ và nền tảng powerlifting</p>
             </div>
             <div>
-              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Chuyên Gia Dinh Dưỡng</h4>
-              <p style="color: #666;">Huấn luyện dinh dưỡng thực tế để tăng cơ, giảm mỡ và hiệu suất</p>
+              <h4 class="expertise-title">Chuyên Gia Dinh Dưỡng</h4>
+              <p class="expertise-text">Huấn luyện dinh dưỡng thực tế để tăng cơ, giảm mỡ và hiệu suất</p>
             </div>
           </div>
         </div>
@@ -56,21 +56,21 @@ const t = useTranslations('vi');
     </div>
   </section>
 
-  <section class="section" style="background: var(--light-bg);">
+  <section class="section dark-section">
     <div class="container">
       <h2 class="section-title">Triết Lý Hybrid Fitness</h2>
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div class="grid" style="grid-template-columns: 1fr; gap: 2rem;">
+      <div class="philosophy-wrapper">
+        <div class="grid philosophy-grid">
           <div class="card">
-            <h3 style="color: var(--primary);">Cân Bằng</h3>
+            <h3 class="philosophy-title">Cân Bằng</h3>
             <p>Kết hợp sức mạnh thực chiến của calisthenics với sức mạnh thô của tập tạ để phát triển thể thao toàn diện.</p>
           </div>
           <div class="card">
-            <h3 style="color: var(--primary);">Tiến Bộ</h3>
+            <h3 class="philosophy-title">Tiến Bộ</h3>
             <p>Mỗi chương trình được thiết kế với lộ trình tiến bộ rõ ràng, dù bạn đang học xà đơn đầu tiên hay đạt PR mới.</p>
           </div>
           <div class="card">
-            <h3 style="color: var(--primary);">Bền Vững</h3>
+            <h3 class="philosophy-title">Bền Vững</h3>
             <p>Xây dựng thói quen và quy trình phù hợp với lối sống của bạn - không chế độ ăn cực đoan hay phương pháp tập không bền vững.</p>
           </div>
         </div>
@@ -78,14 +78,108 @@ const t = useTranslations('vi');
     </div>
   </section>
 
-  <section class="section">
-    <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Tập Với Tôi tại Long Khánh</h2>
-      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #666; max-width: 700px; margin-left: auto; margin-right: auto;">
+  <section class="section center-content">
+    <div class="container">
+      <h2 class="cta-title">Tập Với Tôi tại Long Khánh</h2>
+      <p class="cta-subtitle">
         Dù bạn mới bắt đầu hành trình thể hình hay đang muốn vượt qua bế tắc,
-        tôi sẽ tạo một chương trình cá nhân hóa giúp bạn có kết quả thực sự.
+        tôi sẽ tạo chương trình cá nhân hóa mang lại kết quả thực sự.
       </p>
-      <a href="/vi/contact" class="btn" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">{t('hero.cta')}</a>
+      <a href="/vi/contact" class="btn btn-large">{t('hero.cta')}</a>
     </div>
   </section>
 </Layout>
+
+<style>
+  .dark-section {
+    background: #0a0a0a;
+  }
+
+  .center-content {
+    text-align: center;
+  }
+
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin-bottom: 2rem;
+  }
+
+  .card:last-child {
+    margin-bottom: 0;
+  }
+
+  .card-title {
+    color: #00FFFF;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .large-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-image {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #333333;
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .expertise-title {
+    color: #00FFFF;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .expertise-text {
+    color: #cccccc;
+  }
+
+  .philosophy-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .philosophy-title {
+    color: #00FFFF;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .cta-subtitle {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-large {
+    font-size: 1.1rem;
+    padding: 1.25rem 2.5rem;
+  }
+</style>
